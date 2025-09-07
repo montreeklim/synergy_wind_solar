@@ -1,6 +1,8 @@
 # Synergy between wind and solar in energy generation with chance-constrained models
 
-This project provides a framework for quantifying the synergistic effects of combining wind and solar power generation. The goal is to analyze how a mixed portfolio of these intermittent renewable sources can lead to a more stable and reliable aggregate power output. 
+This project is based on the paper Synergy between wind and solar in energy generation with chance-constrained models.
+
+We provide a framework for quantifying the synergistic effects of combining wind and solar power generation. The goal is to analyze how a mixed portfolio of these intermittent renewable sources can lead to a more stable and reliable aggregate power output. 
 
 We provide code to calculate a **synergy ratio** based on time-series generation data.
 
