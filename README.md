@@ -1,21 +1,13 @@
 # Synergy between wind and solar in energy generation with chance-constrained models
 
-This project is based on the paper Synergy between wind and solar in energy generation with chance-constrained models.
-
-We provide a framework for quantifying the synergistic effects of combining wind and solar power generation. The goal is to analyze how a mixed portfolio of these intermittent renewable sources can lead to a more stable and reliable aggregate power output. 
-
-We provide code to calculate a **synergy ratio** based on time-series generation data.
+This project is based on the paper Synergy between wind and solar in energy generation with chance-constrained models. We provide a framework for quantifying the synergistic effects of combining wind and solar power generation.
 
 ## Repository content
 The repository contains the following content:
-- `catchment_population` presents an efficient algorithm to compute the "catchment population" of each recycling center that was used to estimate the capacities. An implementation of this algorithm is contained in `catchment_population.py`. Further, this directory contains two corresponding input data files in csv format: `bavaria_grid_population.csv` is a file containing the latitude and longitude of the centroid of each 100m x 100m grid in Bavaria as well as the residing population. `rc_locations.csv` contains the latitude and longitude of each recycling center in Bavaria.
-- `data` contains the two input data files that are used in the MIQP model: `users_and_facilities.xlsx` contains all ZIP codes and recycling centers related data like the population, centroid and regional spatial type (rural/urban) of each ZIP code as well as the capacity, centroid and regional spatial type of each recycling center. `travel_dict.json.pbz2` is a compressed json file that contains the travel probabilities from each ZIP code to each recycling center.  
-- `model` contains scripts for the optimization of the MIQP model and visualization of the results: `model.py` contains functions for building and optimizing the MIQP model, while `greedy_heuristic.py` applies a greedy heuristic to achieve a feasible solution. `plotting.py` and `results.py` contain functions tasked with visualizing results through various different plots as well as excel tables. They also contain superordinate functions that create the corresponding results first by running functions from `model.py` and/or `greedy_heuristic.py` before creating the corresponding visualization. These functions are called by functions in `tables_and_figures.py` to create the exact same figures and tables that are included in the paper from scratch. Lastly, `utils.py` contains helper and utility functions.
-- `subsequent_work`contains a copy of the files in `model`that have been further expanded on for the application of this topic.
-- `results` contains the excel tables and figures visualizing the results that are included in the paper.
-- `appendix.pdf` that supplments the main text. This appendix includes proofs, sources of data, and figures and tables. 
+- `data` contains the two historical data files that contains wind and solar generation in 2015 for European countries from EMHIRES dataset. All required features are selected and saved as `df_wind` and `df_pv`. Generated scenarios are contained in `scenarios` folder inside which contain 10 sets of 100 generated scenarios for wind and solar generation of each country.
+- `code` contains scripts for the optimization of the Naive model and Storage-Enhanced model, and visualization of the data: `mean_generation_chart.py` `heat_map_correlation.py` and `heatmap_mean_log_scale.py` produce plots for explrationary data analysis.  `arma_pv_best_models.py` and `arma_wind_best_models.py` find the lag of ARMA(p,q) that minimize the BIC and the residuals are white noise to use as a forecasting model. `pv_scenarios_generation.py` and `wind_scenarios_generation.py` generate scenarios used in optimization model from the forecasting model. `naive_optimization_models.py` solve the Naive optimization and `parallel_battery.py` solve the Storage-Enhanced model in array which can be run in parallel.
+- `results` contains the excel tables for optimization results discussed in the paper.
 ## Requirements to run code
 The code uses some open-source Python packages. The ones that the reader may be most unfamiliar with are:
-- Pyomo, a Python-based optimization modeling language that allows building optimization models.
-- Gurobi, a software well-equiped for solving complex optimization models such as MIQPs.
-- Geopy, which was used for calculating geodesic distances (i.e. shortest distances on the surface of the earth) between two locations.
+- Gurobi, a software well-equiped for solving mixed-integer programming models.
+- Geopandas and Cartopy, Python packages for create plots related to real-world locations. 
