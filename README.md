@@ -1,13 +1,21 @@
-# Synergy between wind and solar in energy generation with chance-constrained models
+# Measuring the Economic Value of Wind–Solar Complementarity in Europe Using Chance Constraints
 
-This project is based on the paper Synergy between wind and solar in energy generation with chance-constrained models. We provide a framework for quantifying the synergistic effects of combining wind and solar power generation.
+This repository accompanies the working-paper titled "Measuring the Economic Value of Wind–Solar Complementarity in Europe Using Chance Constraints" by Montree Jaidee and Bismark Singh. We provide a framework for quantifying the synergistic effects of combining wind and solar power generation.
 
 ## Repository content
+## Repository content
+
 The repository contains the following content:
-- `data` contains the two historical data files that contains wind and solar generation in 2015 for European countries from EMHIRES dataset. All required features are selected and saved as `df_wind` and `df_pv`. Generated scenarios are contained in `scenarios` folder inside which contain 10 sets of 100 generated scenarios for wind and solar generation of each country.
-- `code` contains scripts for the optimization of the Naive model and Storage-Enhanced model, and visualization of the data: `mean_generation_chart.py` `heat_map_correlation.py` and `heatmap_mean_log_scale.py` produce plots for explrationary data analysis.  `arma_pv_best_models.py` and `arma_wind_best_models.py` find the lag of ARMA(p,q) that minimize the BIC and the residuals are white noise to use as a forecasting model. `pv_scenarios_generation.py` and `wind_scenarios_generation.py` generate scenarios used in optimization model from the forecasting model. `naive_optimization_models.py` solve the Naive optimization and `parallel_battery.py` solve the Storage-Enhanced model in array which can be run in parallel.
-- `results` contains the excel tables for optimization results discussed in the paper.
-## Requirements to run code
+
+- `data`: contains the two historical data files of wind and solar generation in 2015 for European countries, adapted from the EMHIRES dataset. All required features are selected and saved as `df_wind` and `df_pv`. Generated scenarios are contained in the `scenarios` folder, which includes 10 independent sets of 100 sampled scenarios for wind and solar generation of each country.
+- `code`: contains scripts for the Naive optimization model and the Storage-Enhanced optimization model, as well as visualization of the data.  
+  - Visualization: `mean_generation_chart.py`, `heat_map_correlation.py`, `heatmap_mean_log_scale.py` (exploratory data analysis plots)  
+  - Forecasting: `arma_pv_best_models.py`, `arma_wind_best_models.py` (select ARMA(p,q) lags minimizing BIC with white-noise residuals)  
+  - Scenario generation: `pv_scenarios_generation.py`, `wind_scenarios_generation.py` (generate scenarios for the optimization models)  
+  - Optimization: `naive_optimization_models.py` (Naive model), `parallel_battery.py` (Storage-Enhanced model, parallel execution)
+- `results`: contains the Excel tables for the results produced by the optimization models in the article.
+
+## Requirements to run the code
 The code uses some open-source Python packages. The ones that the reader may be most unfamiliar with are:
-- Gurobi, a software well-equiped for solving mixed-integer programming models.
-- Geopandas and Cartopy, Python packages for create plots related to real-world locations. 
+- [Gurobi](https://www.gurobi.com/) – for solving mixed-integer optimization problems  
+- [GeoPandas](https://geopandas.org/) and [Cartopy](https://scitools.org.uk/cartopy/) – for producing geospatial plots  
