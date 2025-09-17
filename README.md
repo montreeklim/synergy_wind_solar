@@ -3,7 +3,6 @@
 This repository accompanies the working-paper titled "Measuring the Economic Value of Wind–Solar Complementarity in Europe Using Chance Constraints" by Montree Jaidee and Bismark Singh. We provide a framework for quantifying the synergistic effects of combining wind and solar power generation.
 
 ## Repository content
-## Repository content
 
 The repository contains the following content:
 
