@@ -5,7 +5,7 @@ import scipy.stats as st
 # --- 1. Load Data ---
 try:
     # Load the dataset from the file you uploaded
-    df = pd.read_csv('all_countries_naive_results.csv')
+    df = pd.read_csv('../results/all_countries_naive_results.csv')
     print("Successfully loaded 'all_countries_naive_results.csv'")
 except FileNotFoundError:
     print("Error: 'all_countries_naive_results.csv' not found. Please ensure the file is uploaded.")
