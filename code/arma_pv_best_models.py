@@ -115,7 +115,7 @@ logging.basicConfig(
 # -------------------------------
 # 1. Load & preprocess
 # -------------------------------
-df = pd.read_csv('df_pv.csv')
+df = pd.read_csv('../data/df_pv.csv')
 df['Date'] = pd.to_datetime(df['Date'], format='%d/%m/%Y %H:%M')
 df.rename(columns={'Hour': 'hour'}, inplace=True)
 

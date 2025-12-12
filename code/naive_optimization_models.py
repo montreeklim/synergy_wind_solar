@@ -96,8 +96,8 @@ for tol in tolerances:
             
             try:
                 # Load the specific dataset for the current set number
-                wind = pd.read_csv(f'scenario_results/wind_arma_{country}_set_{set_i}.csv', index_col=0)
-                solar = pd.read_csv(f'scenario_results/pv_arma_{country}_set_{set_i}.csv', index_col=0)
+                wind = pd.read_csv(f'../data/scenarios/wind_arma_{country}_set_{set_i}.csv', index_col=0)
+                solar = pd.read_csv(f'../data/scenarios/pv_arma_{country}_set_{set_i}.csv', index_col=0)
                 
                 solar.columns = wind.columns
                 solar.index = wind.index

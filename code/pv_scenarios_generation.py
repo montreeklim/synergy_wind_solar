@@ -8,7 +8,7 @@ warnings.filterwarnings("ignore")
 logging.basicConfig(level=logging.INFO,
                     format="%(asctime)s %(levelname)s — %(message)s")
 
-df = pd.read_csv("df_pv.csv")
+df = pd.read_csv("../data/df_pv.csv")
 df["Date"] = pd.to_datetime(df["Date"], dayfirst=True)
 df["hour"] = df["Date"].dt.hour
 
@@ -38,7 +38,7 @@ for c in valid_countries:
 
 # -------- Load and clean best-ARIMA parameters --------
 
-params = (pd.read_csv("arma_best_model_pv.csv")
+params = (pd.read_csv("../results/arma_best_model_pv.csv")
           .assign(hour=lambda x: x["hour"].astype(int))
           .set_index(["country", "hour"]))
 params["notes"] = params["notes"].fillna("")

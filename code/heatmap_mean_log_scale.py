@@ -14,8 +14,8 @@ import matplotlib.patheffects as PathEffects
 
 # —————————————————————————————————————————————————————————————
 # 1) Load & prep the raw data
-pv   = pd.read_csv('EMHIRES_PV_2015.csv',   parse_dates=['Date'])
-wind = pd.read_csv('EMHIRES_wind_2015.csv', parse_dates=['Date'])
+pv   = pd.read_csv('../data/EMHIRES_PV_2015.csv',   parse_dates=['Date'])
+wind = pd.read_csv('../data/EMHIRES_wind_2015.csv', parse_dates=['Date'])
 
 drop_cols = ['Date','Year','Month','Day','Hour','CY']
 pv   = pv.drop(columns=[c for c in drop_cols if c in pv.columns])

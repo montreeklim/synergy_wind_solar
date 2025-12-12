@@ -101,17 +101,17 @@ def run_optimization_and_collect_results(name, data_matrix, capacity = 1000):
     prob = 1.0 / data_matrix.shape[0]
     cost = (gp.quicksum(y[t] * wind_costs[t] for t in T)
             - prob * gp.quicksum(charge_cost*p[w,t] + discharge_cost*q[w,t]
-                                for w in W for t in T))
+                                 for w in W for t in T))
     model.setObjective(cost, GRB.MAXIMIZE)
 
     # Constraints
     model.addConstrs((y[t] - q[w,t] + p[w,t] <= data_matrix.iloc[w, t] + BigM.iloc[w, t] * z[w]
-                     for w in W for t in T), name="capacity")
+                      for w in W for t in T), name="capacity")
     model.addConstr(gp.quicksum(z[w] for w in W) <= np.floor(len(W) * tol), name="z_tolerance")
     
     # State of Charge Constraints
     model.addConstrs((x[w, t+1] == x[w,t] + charge_coef*p[w,t] - (1/charge_coef)*q[w,t]
-                     for w in W for t in T[:-1]), name="soc")
+                      for w in W for t in T[:-1]), name="soc")
     model.addConstrs((x[w, 0] == initial_battery for w in W), name="init")
 
     # Optimizer settings
@@ -134,12 +134,17 @@ print(f"Starting battery optimization for country: {country}")
 all_run_results = []
 set_numbers = range(1, 11) # Loop from 1 to 10
 
+# Get the specific installed capacities for the selected country
+wind_capacity = installed_capacity_2015[country]["wind"]
+solar_capacity = installed_capacity_2015[country]["solar"]
+combined_capacity = wind_capacity + solar_capacity
+
 for i in set_numbers:
     print(f"  > Processing dataset set_{i}...")
     try:
         # Load the specific dataset for the current set number
-        wind = pd.read_csv(f'scenario_results/wind_arma_{country}_set_{i}.csv', index_col=0)
-        solar = pd.read_csv(f'scenario_results/pv_arma_{country}_set_{i}.csv', index_col=0)
+        wind = pd.read_csv(f'../data/scenarios/wind_arma_{country}_set_{i}.csv', index_col=0)
+        solar = pd.read_csv(f'../data/scenarios/pv_arma_{country}_set_{i}.csv', index_col=0)
 
         # Align data and create combined set
         solar.columns = wind.columns
@@ -148,10 +153,10 @@ for i in set_numbers:
         solar = np.round(solar, 3)
         combined = wind + solar
 
-        # Run optimization for each method
-        res_wind = run_optimization_and_collect_results("wind only", wind, capacity = 100)
-        res_solar = run_optimization_and_collect_results("pv only", solar, capacity = 100)
-        res_combined = run_optimization_and_collect_results("combined", combined, capacity = 100)
+        # Run optimization for each method using the correct installed capacity
+        res_wind = run_optimization_and_collect_results("wind only", wind, capacity=wind_capacity)
+        res_solar = run_optimization_and_collect_results("pv only", solar, capacity=solar_capacity)
+        res_combined = run_optimization_and_collect_results("combined", combined, capacity=combined_capacity)
 
         # Collect results for this set into a DataFrame
         results_this_set = [res_wind, res_solar, res_combined]
@@ -208,7 +213,7 @@ if all_run_results:
     print(final_df)
 
     # Save the final DataFrame to a single CSV file
-    output_filename = f'battery_{country}_all_sets_tol_{tol}_100.csv'
+    output_filename = f'battery_{country}_all_sets_tol_{tol}_384_installed_capacity.csv'
     final_df.to_csv(output_filename, index=False)
     
     print(f"\nSuccessfully saved all results to '{output_filename}'")

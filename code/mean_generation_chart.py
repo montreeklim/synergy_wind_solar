@@ -4,12 +4,11 @@ import matplotlib.pyplot as plt
 import sys
 from matplotlib.ticker import ScalarFormatter
 
-# This script assumes EMHIRES_PV_2015.csv and EMHIRES_wind_2015.csv are in the same directory.
 
 # 1. Load data
 try:
-    pv = pd.read_csv('EMHIRES_PV_2015.csv', parse_dates=['Date'])
-    wind = pd.read_csv('EMHIRES_wind_2015.csv', parse_dates=['Date'])
+    pv = pd.read_csv('../data/EMHIRES_PV_2015.csv', parse_dates=['Date'])
+    wind = pd.read_csv('../data/EMHIRES_wind_2015.csv', parse_dates=['Date'])
 except FileNotFoundError:
     print("Could not find data files. Please ensure they are in the correct directory.")
     sys.exit()
@@ -104,6 +103,6 @@ for ax in axes:
     ax.xaxis.set_major_formatter(formatter)
 
 plt.tight_layout(rect=[0, 0, 1, 0.96]) # Adjust layout to make room for the suptitle
-plt.savefig('faceted_barchart_fullnames.png', dpi=300)
+plt.savefig('barchart.png', dpi=300)
 print("Successfully generated and saved 'faceted_barchart_fullnames.png'")
 plt.show()

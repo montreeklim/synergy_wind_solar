@@ -136,7 +136,7 @@ def find_best_arma_by_bic(data, p_range, q_range, significance_level=0.05):
 # DATA LOADING & PREP
 # -------------------------------
 try:
-    df = pd.read_csv('df_wind.csv')
+    df = pd.read_csv('../data/df_wind.csv')
 except FileNotFoundError:
     print("Error: 'df_wind.csv' not found. Please make sure the data file is in the correct directory.")
     exit() # Exit the script if the data file is missing

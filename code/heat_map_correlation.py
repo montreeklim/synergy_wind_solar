@@ -9,8 +9,8 @@ from matplotlib.colors import TwoSlopeNorm
 import matplotlib.patheffects as PathEffects
 
 # --- 1) Load & convert CF → MW ----------------------------------------------
-df_pv   = pd.read_csv("EMHIRES_PV_2015.csv")
-df_wind = pd.read_csv("EMHIRES_wind_2015.csv")
+df_pv   = pd.read_csv("../data/EMHIRES_PV_2015.csv")
+df_wind = pd.read_csv("../data/EMHIRES_wind_2015.csv")
 
 caps = {
     "AT": {"wind":1981,  "solar":404},   "BE": {"wind":2172,  "solar":3068},

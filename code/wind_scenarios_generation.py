@@ -15,8 +15,8 @@ warnings.filterwarnings("ignore", category=UserWarning)
 print("--- Loading Data and Model Parameters ---")
 
 # File paths
-model_params_file = 'arma_best_model_wind.csv'
-wind_data_file = 'df_wind.csv'
+model_params_file = '../results/arma_best_model_wind.csv'
+wind_data_file = '../data/df_wind.csv'
 
 # Load the model parameters saved from the previous step
 results_df = pd.read_csv(model_params_file)
