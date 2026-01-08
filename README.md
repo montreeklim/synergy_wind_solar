@@ -30,8 +30,8 @@ The profit of wind generation for each hour of the day is defined as:
 ### 2. Battery and Operational Costs
 * **Charge/Discharge Costs ($C_c, C_d$):** 0.0256
 * **Efficiency Coefficient ($\eta$):** 0.9
-* **Upper Bound Capacity ($X_{UB}$):** installed capacity of each country
-* **Lower Bound Capacity ($X_{LB}$):** $0.2 X_{ub}$
+* **Upper Bound Capacity ($X_{ub}$):** installed capacity of each country
+* **Lower Bound Capacity ($X_{lb}$):** $0.2 X_{ub}$
 * **Maximum Charge/Discharge Rate:** $0.5 X_{ub}$
 * **Initial Battery State:** $0.5 X_{ub}$
 
