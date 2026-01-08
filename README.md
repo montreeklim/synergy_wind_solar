@@ -17,7 +17,7 @@ The repository contains the following content:
 ## Parameter Values
 
 ### 1. Hourly Profit ($R$)
-The profit of electricity generation for each hour of the day is defined as:
+The profit of electricity generation for each hour of the day is:
 
 | Hour | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
