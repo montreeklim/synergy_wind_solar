@@ -28,13 +28,12 @@ The profit of wind generation for each hour of the day is defined as:
 | **Profit** | 0.0250 | 0.0261 | 0.0285 | 0.0353 | 0.0531 | 0.0671 | 0.0438 | 0.0333 | 0.0287 | 0.0268 | 0.0240 | 0.0211 |
 
 ### 2. Battery and Operational Costs
-Operational constraints are defined based on the country-specific capacity $X_{ub}$.
-
 * **Charge/Discharge Costs ($C_c, C_d$):** 0.0256
 * **Efficiency Coefficient ($\eta$):** 0.9
+* **Upper Bound Capacity ($X_{UB}$):** installed capacity of each country
 * **Lower Bound Capacity ($X_{LB}$):** $0.2 X_{ub}$
-* **Maximum Charge/Discharge Rate:** $0.2 X_{ub}$
-* **Initial Battery State:** $0.2 X_{ub}$
+* **Maximum Charge/Discharge Rate:** $0.5 X_{ub}$
+* **Initial Battery State:** $0.5 X_{ub}$
 
 ## Requirements to run the code
 The code uses some open-source Python packages. The ones that the reader may be most unfamiliar with are:
