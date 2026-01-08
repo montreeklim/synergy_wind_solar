@@ -16,8 +16,8 @@ The repository contains the following content:
 
 ## Parameter Values
 
-### 1. Hourly Wind Profit ($R$)
-The profit of wind generation for each hour of the day is defined as:
+### 1. Hourly Profit ($R$)
+The profit of electricity generation for each hour of the day is defined as:
 
 | Hour | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
