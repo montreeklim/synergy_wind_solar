@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import argparse
 from statsmodels.tsa.arima.model import ARIMA
 import warnings, logging, os
 
@@ -8,7 +9,17 @@ warnings.filterwarnings("ignore")
 logging.basicConfig(level=logging.INFO,
                     format="%(asctime)s %(levelname)s — %(message)s")
 
-df = pd.read_csv("../data/df_pv.csv")
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    "--forecast_day", type=int, default=271,
+    help="1-indexed day of year to forecast (must be > WINDOW=270). "
+         "E.g. 271=Sep 28, 301=Oct 28, 332=Nov 28, 362=Dec 28."
+)
+args = parser.parse_args()
+if args.forecast_day <= 270:
+    raise ValueError("forecast_day must be > 270 so a full 270-day PV training window fits within the data.")
+
+df = pd.read_csv("data/df_pv.csv")
 df["Date"] = pd.to_datetime(df["Date"], dayfirst=True)
 df["hour"] = df["Date"].dt.hour
 
@@ -38,7 +49,7 @@ for c in valid_countries:
 
 # -------- Load and clean best-ARIMA parameters --------
 
-params = (pd.read_csv("../results/arma_best_model_pv.csv")
+params = (pd.read_csv(f"results/arma_best_model_pv_day_{args.forecast_day}.csv")
           .assign(hour=lambda x: x["hour"].astype(int))
           .set_index(["country", "hour"]))
 params["notes"] = params["notes"].fillna("")
@@ -47,7 +58,7 @@ params["notes"] = params["notes"].fillna("")
 WINDOW = 270
 N_SCEN = 100
 N_SETS = 10
-out_dir = "scenario_results"
+out_dir = os.path.join("scenario_results", f"day_{args.forecast_day}")
 os.makedirs(out_dir, exist_ok=True)
 
 ordered = {
@@ -73,7 +84,8 @@ for c in valid_countries:
                     continue  # Skip to the next hour
 
                 p, d, q = param_row[["p", "d", "q"]].astype(int)
-                train = ordered[c][h].iloc[:WINDOW]
+                start = args.forecast_day - 1 - WINDOW
+                train = ordered[c][h].iloc[start : args.forecast_day - 1]
                     
                 if d == 1:
                     # RETRANSFORM PROCESS for differenced data
@@ -86,7 +98,7 @@ for c in valid_countries:
                     # STANDARD FORECAST for non-differenced data
                     model_fit = ARIMA(train, order=(p, 0, q)).fit()
                     simulated_values = model_fit.simulate(nsimulations=1, repetitions=N_SCEN)
-                    scenarios = simulated_values.values
+                    scenarios = simulated_values.values.copy()
 
                 # PV generation cannot be negative, so clip values at 0
                 scenarios[scenarios < 0] = 0

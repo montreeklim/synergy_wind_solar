@@ -45,11 +45,24 @@ installed_capacity_2015 = {
 }
 
 # --- 2. Experimental Parameters ---
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--index', type=int, default=None,
+                    help='Country index 0-27 (omit to run all countries sequentially)')
+args = parser.parse_args()
+
 T = range(24)
 BigM = 50000
-tolerances = [0.01, 0.05]
-set_numbers = range(1, 11)  
-countries = installed_capacity_2015.keys()
+tolerances = [0.01, 0.05, 0.10]
+set_numbers = range(1, 11)
+forecast_days = [271, 301, 332, 362]
+
+all_countries = list(installed_capacity_2015.keys())
+if args.index is not None:
+    countries = [all_countries[args.index]]
+else:
+    countries = all_countries
 
 # --- 3. Updated Optimization Function ---
 
@@ -89,77 +102,75 @@ def run_optimization_and_collect_results(name, data_matrix, current_tol):
 # Master list to store results from every single experimental run
 all_experiments_results = []
 
-for tol in tolerances:
-    for set_i in set_numbers:
-        for country in countries:
-            print(f"Processing: tol={tol}, set={set_i}, country={country}")
-            
-            try:
-                # Load the specific dataset for the current set number
-                wind = pd.read_csv(f'../data/scenarios/wind_arma_{country}_set_{set_i}.csv', index_col=0)
-                solar = pd.read_csv(f'../data/scenarios/pv_arma_{country}_set_{set_i}.csv', index_col=0)
-                
-                solar.columns = wind.columns
-                solar.index = wind.index
-                
-                wind = np.round(wind, 3)
-                solar = np.round(solar, 3)
-                combined = wind + solar
+for forecast_day in forecast_days:
+    scen_dir = f'scenario_results/day_{forecast_day}'
+    for tol in tolerances:
+        for set_i in set_numbers:
+            for country in countries:
+                print(f"Processing: day={forecast_day}, tol={tol}, set={set_i}, country={country}")
 
-                # Run optimization, passing the current 'tol' value
-                res_wind = run_optimization_and_collect_results("wind only", wind, tol)
-                res_solar = run_optimization_and_collect_results("pv only", solar, tol)
-                res_combined = run_optimization_and_collect_results("combined", combined, tol)
-                
-                # Store the parameters for this run in each result dictionary
-                for res in [res_wind, res_solar, res_combined]:
-                    res['country'] = country
-                    res['set_number'] = set_i
-                    res['tol'] = tol
-                
-                all_experiments_results.extend([res_wind, res_solar, res_combined])
+                try:
+                    wind = pd.read_csv(f'{scen_dir}/wind_arma_{country}_set_{set_i}.csv', index_col=0)
+                    solar = pd.read_csv(f'{scen_dir}/pv_arma_{country}_set_{set_i}.csv', index_col=0)
 
-            except FileNotFoundError:
-                print(f"  -> SKIPPING: File not found for tol={tol}, set={set_i}, country={country}")
-                continue
+                    solar.columns = wind.columns
+                    solar.index = wind.index
+
+                    wind = np.round(wind, 3)
+                    solar = np.round(solar, 3)
+                    combined = wind + solar
+
+                    res_wind = run_optimization_and_collect_results("wind only", wind, tol)
+                    res_solar = run_optimization_and_collect_results("pv only", solar, tol)
+                    res_combined = run_optimization_and_collect_results("combined", combined, tol)
+
+                    for res in [res_wind, res_solar, res_combined]:
+                        res['country'] = country
+                        res['set_number'] = set_i
+                        res['tol'] = tol
+                        res['forecast_day'] = forecast_day
+
+                    all_experiments_results.extend([res_wind, res_solar, res_combined])
+
+                except FileNotFoundError:
+                    print(f"  -> SKIPPING: day={forecast_day}, tol={tol}, set={set_i}, country={country}")
+                    continue
 
 # --- 5. Data Aggregation and Transformation ---
 
 print("\n--- All experiments complete. Transforming final data... ---")
 
-# Create the initial "long" format DataFrame from the list of all results
 all_results_long = pd.DataFrame(all_experiments_results)
 
-# Pivot the table, using the experiment parameters as the new index
-wide_df = all_results_long.pivot(index=['tol', 'set_number', 'country'], columns='Method', values='Objective')
+wide_df = all_results_long.pivot(
+    index=['forecast_day', 'tol', 'set_number', 'country'],
+    columns='Method', values='Objective'
+)
 
-# Rename the columns for clarity
 wide_df = wide_df.rename(columns={
     'wind only': 'wind objective',
     'pv only': 'solar objective',
     'combined': 'combined objective'
 })
 
-# Calculate the synergy ratio
 denominator = wide_df['wind objective'] + wide_df['solar objective']
-wide_df['ratio'] = wide_df['combined objective'] / denominator
-wide_df.replace([np.inf, -np.inf], 0, inplace=True)
-wide_df.fillna(0, inplace=True)
+wide_df['ratio'] = np.where(denominator <= 0, np.nan,
+                            wide_df['combined objective'] / denominator)
 
-# Reset the index to turn 'tol', 'set_number', and 'country' back into columns
 final_df = wide_df.reset_index()
-
-# Reorder columns to place experiment parameters first
 final_df.columns.name = None
 final_df = final_df[[
-    'tol', 'set_number', 'country', 'wind objective', 'solar objective', 
-    'combined objective', 'ratio'
+    'forecast_day', 'tol', 'set_number', 'country',
+    'wind objective', 'solar objective', 'combined objective', 'ratio'
 ]]
 
 # --- 6. Display and Save the Final Output ---
 print(final_df.head(10))
 
-output_filename = 'all_countries_naive_results.csv'
-final_df.to_csv(output_filename, index=False, float_format='%.5f')
+if args.index is not None:
+    output_filename = f'naive_results_{all_countries[args.index]}.csv'
+else:
+    output_filename = 'all_countries_naive_results_rolling.csv'
+final_df.to_csv(output_filename, index=False, float_format='%.5f', na_rep='---')
 
 print(f"\nSuccessfully saved the final results to {output_filename}")

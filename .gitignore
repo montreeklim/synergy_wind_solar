@@ -1,0 +1,22 @@
+# Local Claude Code tool config — not part of the project
+.claude/
+
+# HPC SLURM job logs (stdout/stderr) — not needed to reproduce the analysis
+hpc_logs/
+
+# Claude Code project instructions — not part of the public repo
+CLAUDE.md
+
+# --- code/: keep only the .py / .slurm source, exclude run output that landed here ---
+code/*.png
+code/*.log
+code/*.xlsx
+
+# LaTeX manuscript, drafts, and reviewer correspondence — excluded entirely
+writing/
+
+# Per-country ARMA residual diagnostic plots
+diagnostic_plots/
+
+# Battery-sizing sensitivity variant not included in the public release
+battery_results/384_installed_capacity/

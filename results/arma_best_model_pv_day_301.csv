@@ -1,0 +1,446 @@
+country,hour,p,d,q,bic,notes
+AT,4,0,0,0,,Zero-production rule applied
+AT,5,0,0,0,,Zero-production rule applied
+AT,6,2,0,1,2371.2667307146094,Passes Ljung-Box
+AT,7,2,0,1,2728.416186976242,Passes Ljung-Box
+AT,8,1,0,1,2854.9785207335876,Passes Ljung-Box
+AT,9,1,0,0,2928.550707623605,Passes Ljung-Box
+AT,10,1,0,0,2979.374646440104,Passes Ljung-Box
+AT,11,1,0,0,3004.1394865446664,Passes Ljung-Box
+AT,12,1,0,1,2978.613679212747,Passes Ljung-Box
+AT,13,1,0,1,2921.713906812308,Passes Ljung-Box
+AT,14,1,0,1,2844.4603959874717,Passes Ljung-Box
+AT,15,1,1,1,2659.333481347338,Passes Ljung-Box
+AT,16,1,1,1,2212.061923969395,Passes Ljung-Box
+AT,17,0,0,0,,Zero-production rule applied
+AT,18,0,0,0,,Zero-production rule applied
+BE,4,0,0,0,,Zero-production rule applied
+BE,5,0,0,0,,Zero-production rule applied
+BE,6,0,0,0,,Zero-production rule applied
+BE,7,0,1,1,3684.492032421494,Passes Ljung-Box
+BE,8,1,0,1,3993.3775018999404,Passes Ljung-Box
+BE,9,1,0,1,4136.7597303553475,Passes Ljung-Box
+BE,10,1,0,1,4214.280782201861,Passes Ljung-Box
+BE,11,1,0,0,4252.989169657774,Passes Ljung-Box
+BE,12,1,0,0,4245.9334577125655,Passes Ljung-Box
+BE,13,1,0,0,4209.676925927278,Passes Ljung-Box
+BE,14,1,0,1,4135.420863957664,Passes Ljung-Box
+BE,15,1,0,1,3971.345208219691,Passes Ljung-Box
+BE,16,0,1,1,3656.3584021003276,Passes Ljung-Box
+BE,17,0,0,0,,Zero-production rule applied
+BE,18,0,0,0,,Zero-production rule applied
+BE,19,0,0,0,,Zero-production rule applied
+BG,3,0,0,0,,Zero-production rule applied
+BG,4,0,0,0,,Zero-production rule applied
+BG,5,1,1,1,2623.029216506024,Passes Ljung-Box
+BG,6,1,1,1,3151.0115420959,Passes Ljung-Box
+BG,7,1,1,1,3384.7296942873354,Passes Ljung-Box
+BG,8,1,1,1,3494.1382291052587,Passes Ljung-Box
+BG,9,2,0,1,3570.7925953146605,Passes Ljung-Box
+BG,10,1,0,0,3590.432753240498,Passes Ljung-Box
+BG,11,1,0,0,3562.945690639143,Passes Ljung-Box
+BG,12,1,0,0,3495.24884640917,Passes Ljung-Box
+BG,13,2,0,1,3397.219279646345,Passes Ljung-Box
+BG,14,1,1,1,3184.8538816114524,Passes Ljung-Box
+BG,15,1,1,1,2748.425684649753,Passes Ljung-Box
+BG,16,0,0,0,,Zero-production rule applied
+BG,17,0,0,0,,Zero-production rule applied
+CH,4,0,0,0,,Zero-production rule applied
+CH,5,0,0,0,,Zero-production rule applied
+CH,6,2,1,3,2494.307773480278,Passes Ljung-Box
+CH,7,1,1,1,3007.174134019636,Passes Ljung-Box
+CH,8,2,0,1,3187.9261335400706,Passes Ljung-Box
+CH,9,2,0,1,3284.221295177555,Passes Ljung-Box
+CH,10,1,0,0,3349.585479195291,Passes Ljung-Box
+CH,11,1,0,0,3385.7566736188896,Passes Ljung-Box
+CH,12,1,0,0,3373.426996115366,Passes Ljung-Box
+CH,13,1,0,0,3331.949138007577,Passes Ljung-Box
+CH,14,1,0,0,3275.7124648265312,Passes Ljung-Box
+CH,15,1,0,2,3140.808767006667,Passes Ljung-Box
+CH,16,1,1,1,2803.14888262592,Passes Ljung-Box
+CH,17,0,0,0,,Zero-production rule applied
+CH,18,0,0,0,,Zero-production rule applied
+CH,19,0,0,0,,Zero-production rule applied
+CZ,3,0,0,0,,Zero-production rule applied
+CZ,4,0,0,0,,Zero-production rule applied
+CZ,5,0,0,0,,Zero-production rule applied
+CZ,6,2,0,1,3396.0561914532336,Passes Ljung-Box
+CZ,7,2,0,1,3710.477042633346,Passes Ljung-Box
+CZ,8,2,0,1,3852.7849749625843,Passes Ljung-Box
+CZ,9,1,0,1,3928.8134713708237,Passes Ljung-Box
+CZ,10,1,0,0,3986.4465703149467,Passes Ljung-Box
+CZ,11,1,0,0,3997.8880246330286,Passes Ljung-Box
+CZ,12,1,0,0,3969.7741120855603,Passes Ljung-Box
+CZ,13,1,0,0,3897.8418706505886,Passes Ljung-Box
+CZ,14,3,0,0,3791.2163661153354,Passes Ljung-Box
+CZ,15,1,0,2,3558.6081778796542,Passes Ljung-Box
+CZ,16,0,0,0,,Zero-production rule applied
+CZ,17,0,0,0,,Zero-production rule applied
+CZ,18,0,0,0,,Zero-production rule applied
+DE,4,0,0,0,,Zero-production rule applied
+DE,5,0,0,0,,Zero-production rule applied
+DE,6,4,1,3,4492.685734015754,Passes Ljung-Box
+DE,7,3,1,3,4965.6318068249,Passes Ljung-Box
+DE,8,1,0,1,5175.839930605365,Passes Ljung-Box
+DE,9,1,0,1,5275.406653396077,Passes Ljung-Box
+DE,10,1,0,0,5323.219869482515,Passes Ljung-Box
+DE,11,1,0,0,5357.162436724234,Passes Ljung-Box
+DE,12,1,0,0,5338.089493907715,Passes Ljung-Box
+DE,13,1,0,0,5309.722653318564,Passes Ljung-Box
+DE,14,1,0,1,5240.279015175039,Passes Ljung-Box
+DE,15,2,0,1,5054.431791157473,Passes Ljung-Box
+DE,16,1,1,1,4658.707377445357,Passes Ljung-Box
+DE,17,0,0,0,,Zero-production rule applied
+DE,18,0,0,0,,Zero-production rule applied
+DE,19,0,0,0,,Zero-production rule applied
+DK,3,0,0,0,,Zero-production rule applied
+DK,4,0,0,0,,Zero-production rule applied
+DK,5,0,0,0,,Zero-production rule applied
+DK,6,0,1,1,2669.9820130588896,Passes Ljung-Box
+DK,7,1,1,1,3022.8650997226787,Passes Ljung-Box
+DK,8,1,1,1,3202.0040350635254,Passes Ljung-Box
+DK,9,2,0,1,3330.6591676264875,Passes Ljung-Box
+DK,10,1,0,1,3405.996932545695,Passes Ljung-Box
+DK,11,1,0,1,3441.802669629722,Passes Ljung-Box
+DK,12,1,0,1,3428.5887578495967,Passes Ljung-Box
+DK,13,1,0,1,3387.6465006816434,Passes Ljung-Box
+DK,14,1,0,1,3307.257619383728,Passes Ljung-Box
+DK,15,1,1,1,3132.0809976164974,Passes Ljung-Box
+DK,16,0,0,0,,Zero-production rule applied
+DK,17,0,0,0,,Zero-production rule applied
+DK,18,0,0,0,,Zero-production rule applied
+DK,19,0,0,0,,Zero-production rule applied
+EE,3,0,0,0,,Zero-production rule applied
+EE,4,0,0,0,,Zero-production rule applied
+EE,5,0,1,2,5.90744809079882,Passes Ljung-Box
+EE,6,0,1,1,425.63104717305765,Passes Ljung-Box
+EE,7,1,0,1,645.3135539497777,Passes Ljung-Box
+EE,8,1,0,1,748.4954539812276,Passes Ljung-Box
+EE,9,1,0,1,798.0276249429613,Passes Ljung-Box
+EE,10,1,0,1,822.8543421649473,Passes Ljung-Box
+EE,11,1,0,1,813.7547213208085,Passes Ljung-Box
+EE,12,1,0,1,762.0702873441004,Passes Ljung-Box
+EE,13,1,0,1,658.0656319663997,Passes Ljung-Box
+EE,14,1,0,1,466.36437794161833,Passes Ljung-Box
+EE,15,0,0,0,,Zero-production rule applied
+EE,16,0,0,0,,Zero-production rule applied
+EE,17,0,0,0,,Zero-production rule applied
+EE,18,0,0,0,,Zero-production rule applied
+EL,4,0,0,0,,Zero-production rule applied
+EL,5,1,1,1,2742.932313413203,Passes Ljung-Box
+EL,6,1,1,1,3334.3082177152137,Passes Ljung-Box
+EL,7,1,1,1,3620.450749724674,Passes Ljung-Box
+EL,8,1,1,1,3726.500656859242,Passes Ljung-Box
+EL,9,1,1,1,3798.725878026299,Passes Ljung-Box
+EL,10,1,1,1,3846.5009212052055,Passes Ljung-Box
+EL,11,1,1,1,3863.0667671599795,Passes Ljung-Box
+EL,12,1,1,1,3796.2137527715468,Passes Ljung-Box
+EL,13,1,1,1,3722.9620940411733,Passes Ljung-Box
+EL,14,1,1,1,3530.081844525499,Passes Ljung-Box
+EL,15,1,1,1,3101.9835901798824,Passes Ljung-Box
+EL,16,0,0,0,,Zero-production rule applied
+EL,17,0,0,0,,Zero-production rule applied
+ES,5,0,0,0,,Zero-production rule applied
+ES,6,0,0,0,,Zero-production rule applied
+ES,7,0,1,2,3482.8210808094636,Passes Ljung-Box
+ES,8,0,1,2,3863.9827934197833,Passes Ljung-Box
+ES,9,1,0,2,4146.400038529044,Passes Ljung-Box
+ES,10,1,0,0,4216.750822938352,Passes Ljung-Box
+ES,11,1,0,0,4288.553050763074,Passes Ljung-Box
+ES,12,1,0,0,4252.907432174612,Passes Ljung-Box
+ES,13,1,0,0,4252.183116635047,Passes Ljung-Box
+ES,14,1,0,0,4235.5801337444855,Passes Ljung-Box
+ES,15,1,0,0,4150.641919770842,Passes Ljung-Box
+ES,16,0,1,2,3933.2410028352324,Passes Ljung-Box
+ES,17,0,1,2,3515.2032523986936,Passes Ljung-Box
+ES,18,0,0,0,,Zero-production rule applied
+ES,19,0,0,0,,Zero-production rule applied
+FI,3,0,0,0,,Zero-production rule applied
+FI,4,0,0,0,,Zero-production rule applied
+FI,5,0,1,1,141.61137245519436,Passes Ljung-Box
+FI,6,1,0,1,578.420953511805,Passes Ljung-Box
+FI,7,1,0,1,797.8582292863657,Passes Ljung-Box
+FI,8,1,0,1,901.1496971506442,Passes Ljung-Box
+FI,9,1,0,1,953.9033485516709,Passes Ljung-Box
+FI,10,1,0,1,954.7315770118821,Passes Ljung-Box
+FI,11,1,0,1,942.7998558438542,Passes Ljung-Box
+FI,12,1,0,1,897.8338558622232,Passes Ljung-Box
+FI,13,1,0,1,796.6036634776517,Passes Ljung-Box
+FI,14,1,0,1,602.2186162536337,Passes Ljung-Box
+FI,15,0,0,0,,Zero-production rule applied
+FI,16,0,0,0,,Zero-production rule applied
+FI,17,0,0,0,,Zero-production rule applied
+FI,18,0,0,0,,Zero-production rule applied
+FI,19,0,0,0,,Zero-production rule applied
+FR,4,0,0,0,,Zero-production rule applied
+FR,5,0,0,0,,Zero-production rule applied
+FR,6,1,1,3,3057.234764972818,Passes Ljung-Box
+FR,7,0,1,2,3780.8391819670956,Passes Ljung-Box
+FR,8,2,0,1,4085.0944130271764,Passes Ljung-Box
+FR,9,2,0,1,4225.184410770324,Passes Ljung-Box
+FR,10,1,0,0,4269.971020271449,Passes Ljung-Box
+FR,11,1,0,0,4306.35465116392,Passes Ljung-Box
+FR,12,1,0,0,4272.401516360178,Passes Ljung-Box
+FR,13,1,0,0,4248.706683746364,Passes Ljung-Box
+FR,14,1,0,0,4211.067778605425,Passes Ljung-Box
+FR,15,1,0,2,4105.486080601293,Passes Ljung-Box
+FR,16,1,1,1,3840.56893175802,Passes Ljung-Box
+FR,17,0,0,0,,Zero-production rule applied
+FR,18,0,0,0,,Zero-production rule applied
+FR,19,0,0,0,,Zero-production rule applied
+HR,4,0,0,0,,Zero-production rule applied
+HR,5,0,0,0,,Zero-production rule applied
+HR,6,1,1,1,1127.779495222349,Passes Ljung-Box
+HR,7,2,0,1,1570.4357285772996,Passes Ljung-Box
+HR,8,2,0,1,1765.2075110806663,Passes Ljung-Box
+HR,9,3,0,0,1837.8717090182213,Passes Ljung-Box
+HR,10,3,0,0,1864.4444122339542,Passes Ljung-Box
+HR,11,3,0,0,1870.0708189494023,Passes Ljung-Box
+HR,12,3,0,0,1858.7417897127443,Passes Ljung-Box
+HR,13,1,0,2,1812.6011036430534,Passes Ljung-Box
+HR,14,1,0,2,1670.6043096965093,Passes Ljung-Box
+HR,15,0,1,2,1328.3956554015083,Passes Ljung-Box
+HR,16,0,0,0,,Zero-production rule applied
+HR,17,0,0,0,,Zero-production rule applied
+HR,18,0,0,0,,Zero-production rule applied
+HU,3,0,0,0,,Zero-production rule applied
+HU,4,0,0,0,,Zero-production rule applied
+HU,5,0,1,2,542.4096015642199,Passes Ljung-Box
+HU,6,2,0,1,1159.0416563748213,Passes Ljung-Box
+HU,7,2,0,1,1422.300571683585,Passes Ljung-Box
+HU,8,1,0,0,1481.2415388691984,Passes Ljung-Box
+HU,9,1,0,0,1502.1173470072088,Passes Ljung-Box
+HU,10,1,0,0,1521.3496245263507,Passes Ljung-Box
+HU,11,1,0,0,1532.1938246851978,Passes Ljung-Box
+HU,12,1,0,0,1510.6785081741373,Passes Ljung-Box
+HU,13,1,0,0,1468.1550339523997,Passes Ljung-Box
+HU,14,1,0,1,1382.409114792714,Passes Ljung-Box
+HU,15,1,1,1,1123.0144298978369,Passes Ljung-Box
+HU,16,0,0,0,,Zero-production rule applied
+HU,17,0,0,0,,Zero-production rule applied
+HU,18,0,0,0,,Zero-production rule applied
+IE,5,0,0,0,,Zero-production rule applied
+IE,6,0,0,0,,Zero-production rule applied
+IE,7,0,1,1,-1304.4550157534225,Passes Ljung-Box
+IE,8,0,1,1,-727.8781340999768,Passes Ljung-Box
+IE,9,0,1,1,-447.96155330448914,Passes Ljung-Box
+IE,10,1,0,1,-289.52679973104244,Passes Ljung-Box
+IE,11,1,0,1,-212.96670231232758,Passes Ljung-Box
+IE,12,2,0,2,-184.294234268357,Passes Ljung-Box
+IE,13,2,0,2,-183.5674484832752,Passes Ljung-Box
+IE,14,4,0,2,-217.0631046911728,Passes Ljung-Box
+IE,15,0,1,1,-332.2956519512782,Passes Ljung-Box
+IE,16,0,1,1,-511.6359797319179,Passes Ljung-Box
+IE,17,4,1,5,-833.6716287736649,Passes Ljung-Box
+IE,18,0,0,0,,Zero-production rule applied
+IE,19,0,0,0,,Zero-production rule applied
+IE,20,0,0,0,,Zero-production rule applied
+IT,4,0,0,0,,Zero-production rule applied
+IT,5,0,0,0,,Zero-production rule applied
+IT,6,0,1,2,3912.965521638173,Passes Ljung-Box
+IT,7,0,1,2,4427.228345530512,Passes Ljung-Box
+IT,8,0,1,2,4707.723742180766,Passes Ljung-Box
+IT,9,0,1,2,4820.364258800521,Passes Ljung-Box
+IT,10,1,0,2,4888.451837265493,Passes Ljung-Box
+IT,11,1,0,0,4906.044125929422,Passes Ljung-Box
+IT,12,0,1,2,4841.901736201503,Passes Ljung-Box
+IT,13,1,1,2,4796.309844018347,Passes Ljung-Box
+IT,14,2,1,1,4682.72091829732,Passes Ljung-Box
+IT,15,2,1,1,4403.279673701247,Passes Ljung-Box
+IT,16,0,1,3,3938.965977294703,Passes Ljung-Box
+IT,17,0,0,0,,Zero-production rule applied
+IT,18,0,0,0,,Zero-production rule applied
+LT,3,0,0,0,,Zero-production rule applied
+LT,4,0,0,0,,Zero-production rule applied
+LT,5,0,1,1,1240.0426692598774,Passes Ljung-Box
+LT,6,1,0,1,1716.9080251602816,Passes Ljung-Box
+LT,7,1,0,1,1953.105151015506,Passes Ljung-Box
+LT,8,1,0,1,2059.210368448499,Passes Ljung-Box
+LT,9,1,0,1,2112.6043873697818,Passes Ljung-Box
+LT,10,1,0,1,2140.099464351465,Passes Ljung-Box
+LT,11,1,0,1,2125.395437241864,Passes Ljung-Box
+LT,12,1,0,1,2085.7346599417847,Passes Ljung-Box
+LT,13,1,0,1,1976.7096983941235,Passes Ljung-Box
+LT,14,1,0,1,1778.7701102432636,Passes Ljung-Box
+LT,15,0,1,1,1385.4540226246984,Passes Ljung-Box
+LT,16,0,0,0,,Zero-production rule applied
+LT,17,0,0,0,,Zero-production rule applied
+LT,18,0,0,0,,Zero-production rule applied
+LU,4,0,0,0,,Zero-production rule applied
+LU,5,0,0,0,,Zero-production rule applied
+LU,6,0,0,0,,Zero-production rule applied
+LU,7,1,1,3,2021.0643104909977,Passes Ljung-Box
+LU,8,1,0,1,2299.462239924209,Passes Ljung-Box
+LU,9,1,0,1,2430.0207262910753,Passes Ljung-Box
+LU,10,1,0,1,2505.061400735619,Passes Ljung-Box
+LU,11,1,0,1,2521.674658145015,Passes Ljung-Box
+LU,12,1,0,1,2508.880435453817,Passes Ljung-Box
+LU,13,1,0,1,2478.165699883046,Passes Ljung-Box
+LU,14,1,0,1,2403.7725101204346,Passes Ljung-Box
+LU,15,1,0,1,2255.580911428995,Passes Ljung-Box
+LU,16,0,1,1,1913.6077901458823,Passes Ljung-Box
+LU,17,0,0,0,,Zero-production rule applied
+LU,18,0,0,0,,Zero-production rule applied
+LU,19,0,0,0,,Zero-production rule applied
+LV,3,0,0,0,,Zero-production rule applied
+LV,4,0,0,0,,Zero-production rule applied
+LV,5,1,1,1,-636.0237873774258,Passes Ljung-Box
+LV,6,1,0,1,-193.4600436493484,Passes Ljung-Box
+LV,7,1,0,1,28.62050641662764,Passes Ljung-Box
+LV,8,1,0,1,132.9537595508397,Passes Ljung-Box
+LV,9,3,0,0,184.77346309479023,Passes Ljung-Box
+LV,10,1,0,1,208.22309396574315,Passes Ljung-Box
+LV,11,1,0,1,192.6418044642107,Passes Ljung-Box
+LV,12,1,0,1,155.78638097937727,Passes Ljung-Box
+LV,13,1,0,1,37.21617093982127,Passes Ljung-Box
+LV,14,1,0,1,-168.46925039807135,Passes Ljung-Box
+LV,15,0,1,1,-544.1026844204013,Passes Ljung-Box
+LV,16,0,0,0,,Zero-production rule applied
+LV,17,0,0,0,,Zero-production rule applied
+LV,18,0,0,0,,Zero-production rule applied
+NL,4,0,0,0,,Zero-production rule applied
+NL,5,0,0,0,,Zero-production rule applied
+NL,6,0,0,0,,Zero-production rule applied
+NL,7,3,1,3,3290.28070528462,Passes Ljung-Box
+NL,8,1,1,1,3542.6802849221967,Passes Ljung-Box
+NL,9,1,0,1,3705.1503724536415,Passes Ljung-Box
+NL,10,1,0,0,3779.0159979726345,Passes Ljung-Box
+NL,11,1,0,0,3806.8156894207946,Passes Ljung-Box
+NL,12,1,0,0,3798.1824442539423,Passes Ljung-Box
+NL,13,1,0,0,3763.6257679875675,Passes Ljung-Box
+NL,14,1,0,0,3699.383454108051,Passes Ljung-Box
+NL,15,2,0,1,3545.625801418948,Passes Ljung-Box
+NL,16,1,1,1,3222.7275711272605,Passes Ljung-Box
+NL,17,0,0,0,,Zero-production rule applied
+NL,18,0,0,0,,Zero-production rule applied
+NL,19,0,0,0,,Zero-production rule applied
+NO,3,0,0,0,,Zero-production rule applied
+NO,4,0,0,0,,Zero-production rule applied
+NO,5,0,0,0,,Zero-production rule applied
+NO,6,0,0,0,,Zero-production rule applied
+NO,7,0,1,2,572.4325457328251,Passes Ljung-Box
+NO,8,2,0,1,827.663241579188,Passes Ljung-Box
+NO,9,2,0,1,937.1971310792424,Passes Ljung-Box
+NO,10,2,0,1,977.6890566786155,Passes Ljung-Box
+NO,11,1,0,0,1003.8832391393792,Passes Ljung-Box
+NO,12,2,0,1,990.0753362211433,Passes Ljung-Box
+NO,13,2,0,1,944.5409939229486,Passes Ljung-Box
+NO,14,1,1,1,833.0678422757513,Passes Ljung-Box
+NO,15,1,1,1,654.4210215900293,Passes Ljung-Box
+NO,16,0,0,0,,Zero-production rule applied
+NO,17,0,0,0,,Zero-production rule applied
+NO,18,0,0,0,,Zero-production rule applied
+NO,19,0,0,0,,Zero-production rule applied
+NO,20,0,0,0,,Zero-production rule applied
+PL,3,0,0,0,,Zero-production rule applied
+PL,4,0,0,0,,Zero-production rule applied
+PL,5,0,1,1,981.4029644036481,Passes Ljung-Box
+PL,6,1,1,1,1529.4686220763035,Passes Ljung-Box
+PL,7,1,0,1,1890.1564586344264,Passes Ljung-Box
+PL,8,1,0,1,2040.3461171919198,Passes Ljung-Box
+PL,9,1,0,1,2121.122076152583,Passes Ljung-Box
+PL,10,1,0,1,2164.029302405248,Passes Ljung-Box
+PL,11,1,0,1,2165.013771869318,Passes Ljung-Box
+PL,12,1,0,0,2123.3901851003316,Passes Ljung-Box
+PL,13,1,0,1,2031.4682226116342,Passes Ljung-Box
+PL,14,1,0,1,1849.6227482589745,Passes Ljung-Box
+PL,15,1,1,1,1477.7708772351368,Passes Ljung-Box
+PL,16,0,0,0,,Zero-production rule applied
+PL,17,0,0,0,,Zero-production rule applied
+PL,18,0,0,0,,Zero-production rule applied
+PT,5,0,0,0,,Zero-production rule applied
+PT,6,0,0,0,,Zero-production rule applied
+PT,7,4,1,2,1799.5264926088935,Passes Ljung-Box
+PT,8,1,1,1,2514.8455058267455,Passes Ljung-Box
+PT,9,1,1,1,2818.052625325299,Passes Ljung-Box
+PT,10,1,0,0,2946.0971772353028,Passes Ljung-Box
+PT,11,1,0,0,3016.582780817868,Passes Ljung-Box
+PT,12,1,0,0,3015.129541315198,Passes Ljung-Box
+PT,13,1,0,0,3013.15593714168,Passes Ljung-Box
+PT,14,1,0,0,2994.08262439265,Passes Ljung-Box
+PT,15,2,0,1,2910.772705435693,Passes Ljung-Box
+PT,16,1,1,1,2756.193677134925,Passes Ljung-Box
+PT,17,1,1,1,2392.5871294049643,Passes Ljung-Box
+PT,18,0,0,0,,Zero-production rule applied
+PT,19,0,0,0,,Zero-production rule applied
+RO,3,0,0,0,,Zero-production rule applied
+RO,4,0,0,0,,Zero-production rule applied
+RO,5,1,1,1,2736.438302917899,Passes Ljung-Box
+RO,6,2,0,1,3230.516381618675,Passes Ljung-Box
+RO,7,2,0,1,3400.492733282741,Passes Ljung-Box
+RO,8,1,0,0,3455.505857514752,Passes Ljung-Box
+RO,9,1,0,0,3499.210989934353,Passes Ljung-Box
+RO,10,1,0,0,3520.728096529712,Passes Ljung-Box
+RO,11,1,0,0,3517.7576415417197,Passes Ljung-Box
+RO,12,1,0,0,3490.0949505161707,Passes Ljung-Box
+RO,13,1,0,0,3426.07666099836,Passes Ljung-Box
+RO,14,2,0,1,3292.9721283906983,Passes Ljung-Box
+RO,15,1,1,1,2866.154639324076,Passes Ljung-Box
+RO,16,0,0,0,,Zero-production rule applied
+RO,17,0,0,0,,Zero-production rule applied
+SE,3,0,0,0,,Zero-production rule applied
+SE,4,0,0,0,,Zero-production rule applied
+SE,5,0,0,0,,Zero-production rule applied
+SE,6,1,1,1,1509.175718473062,Passes Ljung-Box
+SE,7,0,1,2,1851.639576142585,Passes Ljung-Box
+SE,8,1,0,2,2046.967299118663,Passes Ljung-Box
+SE,9,3,0,0,2135.6750336325845,Passes Ljung-Box
+SE,10,3,0,0,2169.846301219108,Passes Ljung-Box
+SE,11,1,0,1,2184.5965946369315,Passes Ljung-Box
+SE,12,1,0,1,2143.630355573272,Passes Ljung-Box
+SE,13,3,0,0,2070.614997650489,Passes Ljung-Box
+SE,14,3,0,0,1933.5787249000268,Passes Ljung-Box
+SE,15,1,0,1,1687.2999028682652,Passes Ljung-Box
+SE,16,0,0,0,,Zero-production rule applied
+SE,17,0,0,0,,Zero-production rule applied
+SE,18,0,0,0,,Zero-production rule applied
+SE,19,0,0,0,,Zero-production rule applied
+SE,20,0,0,0,,Zero-production rule applied
+SI,4,0,0,0,,Zero-production rule applied
+SI,5,0,0,0,,Zero-production rule applied
+SI,6,1,0,2,2103.9250458995193,Passes Ljung-Box
+SI,7,1,0,2,2564.6591553358257,Passes Ljung-Box
+SI,8,1,0,2,2762.622700142817,Passes Ljung-Box
+SI,9,1,0,0,2859.937589041382,Passes Ljung-Box
+SI,10,1,0,0,2903.461666059178,Passes Ljung-Box
+SI,11,1,0,0,2905.869184547076,Passes Ljung-Box
+SI,12,1,0,0,2881.06979371662,Passes Ljung-Box
+SI,13,1,0,0,2826.351298473421,Passes Ljung-Box
+SI,14,1,0,0,2702.911759867344,Passes Ljung-Box
+SI,15,2,0,1,2430.9241668632635,Passes Ljung-Box
+SI,16,0,0,0,,Zero-production rule applied
+SI,17,0,0,0,,Zero-production rule applied
+SI,18,0,0,0,,Zero-production rule applied
+SK,3,0,0,0,,Zero-production rule applied
+SK,4,0,0,0,,Zero-production rule applied
+SK,5,1,1,1,2115.9992246970737,Passes Ljung-Box
+SK,6,2,0,1,2711.981727453273,Passes Ljung-Box
+SK,7,2,0,1,2956.306827053129,Passes Ljung-Box
+SK,8,1,0,1,3042.0256562580266,Passes Ljung-Box
+SK,9,1,0,0,3101.198297282395,Passes Ljung-Box
+SK,10,1,0,0,3145.542139721709,Passes Ljung-Box
+SK,11,1,0,0,3150.2833254260663,Passes Ljung-Box
+SK,12,1,0,0,3119.9967085499857,Passes Ljung-Box
+SK,13,1,0,1,3058.0147170207924,Passes Ljung-Box
+SK,14,3,0,2,2959.5111183170125,Passes Ljung-Box
+SK,15,2,1,5,2711.4053956648063,Passes Ljung-Box
+SK,16,0,0,0,,Zero-production rule applied
+SK,17,0,0,0,,Zero-production rule applied
+SK,18,0,0,0,,Zero-production rule applied
+UK,4,0,0,0,,Zero-production rule applied
+UK,5,0,0,0,,Zero-production rule applied
+UK,6,0,0,0,,Zero-production rule applied
+UK,7,3,1,3,3852.199348693193,Passes Ljung-Box
+UK,8,2,1,3,4265.634799722621,Passes Ljung-Box
+UK,9,0,1,1,4477.853922366092,Passes Ljung-Box
+UK,10,1,0,1,4613.305525417932,Passes Ljung-Box
+UK,11,1,0,1,4649.4360105775295,Passes Ljung-Box
+UK,12,1,0,2,4641.168287556577,Passes Ljung-Box
+UK,13,1,0,1,4620.946600245547,Passes Ljung-Box
+UK,14,1,0,1,4565.608148439012,Passes Ljung-Box
+UK,15,1,0,1,4441.02165439915,Passes Ljung-Box
+UK,16,0,1,1,4177.700110792275,Passes Ljung-Box
+UK,17,0,0,0,,Zero-production rule applied
+UK,18,0,0,0,,Zero-production rule applied
+UK,19,0,0,0,,Zero-production rule applied
+UK,20,0,0,0,,Zero-production rule applied

@@ -1,0 +1,738 @@
+
+==================================================
+ PROCESSING COUNTRY: AT
+==================================================
+ADF p-value (level): 0.0000
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(1, 0, 4) PASSED. BIC: 16208.77
+ARIMA(1, 0, 5) PASSED. BIC: 16209.03
+ARIMA(2, 0, 1) PASSED. BIC: 16187.97
+ARIMA(2, 0, 2) PASSED. BIC: 16195.03
+ARIMA(2, 0, 3) PASSED. BIC: 16201.23
+ARIMA(2, 0, 4) PASSED. BIC: 16208.44
+ARIMA(2, 0, 5) PASSED. BIC: 16215.02
+ARIMA(3, 0, 0) PASSED. BIC: 16193.00
+ARIMA(3, 0, 1) PASSED. BIC: 16195.10
+ARIMA(3, 0, 2) PASSED. BIC: 16201.89
+ARIMA(3, 0, 3) PASSED. BIC: 16208.48
+ARIMA(3, 0, 4) PASSED. BIC: 16215.54
+ARIMA(3, 0, 5) PASSED. BIC: 16205.86
+ARIMA(4, 0, 0) PASSED. BIC: 16193.97
+ARIMA(4, 0, 1) PASSED. BIC: 16201.22
+ARIMA(4, 0, 2) PASSED. BIC: 16208.20
+ARIMA(4, 0, 3) PASSED. BIC: 16165.08
+ARIMA(4, 0, 4) PASSED. BIC: 16222.02
+ARIMA(5, 0, 0) PASSED. BIC: 16201.21
+ARIMA(5, 0, 1) PASSED. BIC: 16208.51
+ARIMA(5, 0, 2) PASSED. BIC: 16215.26
+ARIMA(5, 0, 3) PASSED. BIC: 16222.65
+ARIMA(5, 0, 4) PASSED. BIC: 16227.16
+ARIMA(5, 0, 5) PASSED. BIC: 16231.46
+--- Search Complete ---
+
+ Best Model Found: ARMA(4, 0, 3) with BIC: 16165.08
+
+==================================================
+ PROCESSING COUNTRY: BE
+==================================================
+ADF p-value (level): 0.0001
+Series stationary; d=0
+--- Starting Model Search ---
+--- Search Complete ---
+
+ No model passed Ljung-Box for BE; selecting by lowest BIC.
+--- Starting Model Search (Finding Lowest BIC) ---
+  > New best found: ARMA(0, 0, 1) with BIC: 18931.09
+  > New best found: ARMA(0, 0, 2) with BIC: 17315.11
+  > New best found: ARMA(0, 0, 3) with BIC: 17026.23
+  > New best found: ARMA(0, 0, 4) with BIC: 16981.06
+  > New best found: ARMA(0, 0, 5) with BIC: 16000.64
+  > New best found: ARMA(1, 0, 0) with BIC: 15340.84
+  > New best found: ARMA(1, 0, 1) with BIC: 14211.58
+  > New best found: ARMA(1, 0, 2) with BIC: 13966.06
+  > New best found: ARMA(1, 0, 3) with BIC: 13915.60
+  > New best found: ARMA(1, 0, 5) with BIC: 13898.85
+  > New best found: ARMA(2, 0, 1) with BIC: 13886.37
+  > New best found: ARMA(5, 0, 3) with BIC: 13857.01
+  > New best found: ARMA(5, 0, 4) with BIC: 13856.39
+--- Search Complete ---
+
+Best Model by BIC: ARMA(5, 0, 4) with BIC: 13856.39
+
+--- Diagnostic: Ljung-Box Test on Best Model's Residuals ---
+Null Hypothesis: The residuals are independently distributed (white noise).
+P-values < 0.05 support this, indicating a good fit.
+      lb_stat  lb_pvalue
+5    3.161673   0.675077
+10  13.088825   0.218748
+15  34.045894   0.003355
+
+==================================================
+ PROCESSING COUNTRY: BG
+==================================================
+ADF p-value (level): 0.0000
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(1, 0, 5) PASSED. BIC: 10357.55
+ARIMA(2, 0, 1) PASSED. BIC: 10341.71
+ARIMA(2, 0, 2) PASSED. BIC: 10342.01
+ARIMA(2, 0, 3) PASSED. BIC: 10347.64
+ARIMA(2, 0, 4) PASSED. BIC: 10353.80
+ARIMA(2, 0, 5) PASSED. BIC: 10360.00
+ARIMA(3, 0, 0) PASSED. BIC: 10337.56
+ARIMA(3, 0, 1) PASSED. BIC: 10343.96
+ARIMA(3, 0, 2) PASSED. BIC: 10347.15
+ARIMA(3, 0, 3) PASSED. BIC: 10354.39
+ARIMA(3, 0, 4) PASSED. BIC: 10360.29
+ARIMA(3, 0, 5) PASSED. BIC: 10366.48
+ARIMA(4, 0, 0) PASSED. BIC: 10343.78
+ARIMA(4, 0, 1) PASSED. BIC: 10351.91
+ARIMA(4, 0, 2) PASSED. BIC: 10354.44
+ARIMA(4, 0, 3) PASSED. BIC: 10361.67
+ARIMA(4, 0, 4) PASSED. BIC: 10356.21
+ARIMA(4, 0, 5) PASSED. BIC: 10365.79
+ARIMA(5, 0, 0) PASSED. BIC: 10350.54
+ARIMA(5, 0, 1) PASSED. BIC: 10355.56
+ARIMA(5, 0, 2) PASSED. BIC: 10363.12
+ARIMA(5, 0, 3) PASSED. BIC: 10367.73
+ARIMA(5, 0, 4) PASSED. BIC: 10375.29
+ARIMA(5, 0, 5) PASSED. BIC: 10369.36
+--- Search Complete ---
+
+ Best Model Found: ARMA(3, 0, 0) with BIC: 10337.56
+
+==================================================
+ PROCESSING COUNTRY: CH
+==================================================
+ADF p-value (level): 0.0000
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(3, 0, 1) PASSED. BIC: 5686.65
+ARIMA(3, 0, 2) PASSED. BIC: 5692.54
+ARIMA(3, 0, 3) PASSED. BIC: 5709.10
+ARIMA(3, 0, 4) PASSED. BIC: 5706.27
+ARIMA(3, 0, 5) PASSED. BIC: 5713.52
+ARIMA(4, 0, 1) PASSED. BIC: 5692.61
+ARIMA(4, 0, 2) PASSED. BIC: 5698.94
+ARIMA(4, 0, 3) PASSED. BIC: 5703.53
+ARIMA(4, 0, 4) PASSED. BIC: 5713.54
+ARIMA(4, 0, 5) PASSED. BIC: 5715.71
+ARIMA(5, 0, 0) PASSED. BIC: 5699.06
+ARIMA(5, 0, 1) PASSED. BIC: 5704.58
+ARIMA(5, 0, 2) PASSED. BIC: 5703.18
+ARIMA(5, 0, 4) PASSED. BIC: 5710.18
+ARIMA(5, 0, 5) PASSED. BIC: 5721.97
+--- Search Complete ---
+
+ Best Model Found: ARMA(3, 0, 1) with BIC: 5686.65
+
+==================================================
+ PROCESSING COUNTRY: CZ
+==================================================
+ADF p-value (level): 0.0000
+Series stationary; d=0
+--- Starting Model Search ---
+--- Search Complete ---
+
+ No model passed Ljung-Box for CZ; selecting by lowest BIC.
+--- Starting Model Search (Finding Lowest BIC) ---
+  > New best found: ARMA(0, 0, 1) with BIC: 13301.27
+  > New best found: ARMA(0, 0, 2) with BIC: 11787.29
+  > New best found: ARMA(0, 0, 3) with BIC: 10783.36
+  > New best found: ARMA(0, 0, 4) with BIC: 10247.85
+  > New best found: ARMA(0, 0, 5) with BIC: 9803.97
+  > New best found: ARMA(1, 0, 1) with BIC: 9111.92
+  > New best found: ARMA(1, 0, 2) with BIC: 8990.12
+  > New best found: ARMA(1, 0, 3) with BIC: 8969.04
+  > New best found: ARMA(1, 0, 4) with BIC: 8966.57
+  > New best found: ARMA(2, 0, 1) with BIC: 8948.88
+  > New best found: ARMA(5, 0, 4) with BIC: 8940.12
+--- Search Complete ---
+
+Best Model by BIC: ARMA(5, 0, 4) with BIC: 8940.12
+
+--- Diagnostic: Ljung-Box Test on Best Model's Residuals ---
+Null Hypothesis: The residuals are independently distributed (white noise).
+P-values < 0.05 support this, indicating a good fit.
+      lb_stat  lb_pvalue
+5    7.042951   0.217466
+10  23.109214   0.010351
+15  40.889430   0.000332
+
+==================================================
+ PROCESSING COUNTRY: DE
+==================================================
+ADF p-value (level): 0.0000
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(1, 0, 5) PASSED. BIC: 21255.28
+ARIMA(2, 0, 1) PASSED. BIC: 21239.92
+ARIMA(2, 0, 2) PASSED. BIC: 21247.07
+ARIMA(2, 0, 3) PASSED. BIC: 21254.44
+ARIMA(2, 0, 4) PASSED. BIC: 21260.94
+ARIMA(2, 0, 5) PASSED. BIC: 21258.91
+ARIMA(3, 0, 1) PASSED. BIC: 21247.04
+ARIMA(3, 0, 2) PASSED. BIC: 21254.34
+ARIMA(3, 0, 3) PASSED. BIC: 21260.66
+ARIMA(3, 0, 4) PASSED. BIC: 21263.26
+ARIMA(3, 0, 5) PASSED. BIC: 21240.56
+ARIMA(4, 0, 1) PASSED. BIC: 21254.21
+ARIMA(4, 0, 2) PASSED. BIC: 21261.46
+ARIMA(4, 0, 4) PASSED. BIC: 21229.81
+ARIMA(5, 0, 0) PASSED. BIC: 21255.83
+ARIMA(5, 0, 1) PASSED. BIC: 21259.82
+ARIMA(5, 0, 2) PASSED. BIC: 21265.97
+--- Search Complete ---
+
+ Best Model Found: ARMA(4, 0, 4) with BIC: 21229.81
+
+==================================================
+ PROCESSING COUNTRY: DK
+==================================================
+ADF p-value (level): 0.0000
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(1, 0, 5) PASSED. BIC: 13923.77
+ARIMA(2, 0, 5) PASSED. BIC: 13909.17
+ARIMA(3, 0, 5) PASSED. BIC: 13914.73
+ARIMA(4, 0, 4) PASSED. BIC: 13927.08
+ARIMA(4, 0, 5) PASSED. BIC: 13920.78
+ARIMA(5, 0, 4) PASSED. BIC: 13935.05
+ARIMA(5, 0, 5) PASSED. BIC: 13932.43
+--- Search Complete ---
+
+ Best Model Found: ARMA(2, 0, 5) with BIC: 13909.17
+
+==================================================
+ PROCESSING COUNTRY: EE
+==================================================
+ADF p-value (level): 0.0000
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(2, 0, 5) PASSED. BIC: 7022.90
+ARIMA(3, 0, 1) PASSED. BIC: 7005.57
+ARIMA(3, 0, 2) PASSED. BIC: 7012.82
+ARIMA(3, 0, 3) PASSED. BIC: 7020.09
+ARIMA(3, 0, 4) PASSED. BIC: 7026.45
+ARIMA(3, 0, 5) PASSED. BIC: 7023.70
+ARIMA(4, 0, 0) PASSED. BIC: 7006.19
+ARIMA(4, 0, 1) PASSED. BIC: 7012.82
+ARIMA(4, 0, 2) PASSED. BIC: 7020.11
+ARIMA(4, 0, 3) PASSED. BIC: 7026.00
+ARIMA(4, 0, 4) PASSED. BIC: 7023.69
+ARIMA(4, 0, 5) PASSED. BIC: 7029.89
+ARIMA(5, 0, 0) PASSED. BIC: 7012.97
+ARIMA(5, 0, 1) PASSED. BIC: 7018.48
+ARIMA(5, 0, 2) PASSED. BIC: 7025.75
+ARIMA(5, 0, 3) PASSED. BIC: 7033.68
+ARIMA(5, 0, 4) PASSED. BIC: 7034.84
+ARIMA(5, 0, 5) PASSED. BIC: 7035.04
+--- Search Complete ---
+
+ Best Model Found: ARMA(3, 0, 1) with BIC: 7005.57
+
+==================================================
+ PROCESSING COUNTRY: EL
+==================================================
+ADF p-value (level): 0.0003
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(2, 0, 4) PASSED. BIC: 12410.79
+ARIMA(3, 0, 4) PASSED. BIC: 12404.46
+ARIMA(4, 0, 3) PASSED. BIC: 12400.32
+ARIMA(4, 0, 5) PASSED. BIC: 12413.72
+--- Search Complete ---
+
+ Best Model Found: ARMA(4, 0, 3) with BIC: 12400.32
+
+==================================================
+ PROCESSING COUNTRY: ES
+==================================================
+ADF p-value (level): 0.0000
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(1, 0, 5) PASSED. BIC: 20812.47
+ARIMA(2, 0, 1) PASSED. BIC: 20789.43
+ARIMA(2, 0, 2) PASSED. BIC: 20794.90
+ARIMA(2, 0, 3) PASSED. BIC: 20802.00
+ARIMA(2, 0, 4) PASSED. BIC: 20806.55
+ARIMA(2, 0, 5) PASSED. BIC: 20813.16
+ARIMA(3, 0, 1) PASSED. BIC: 20795.14
+ARIMA(3, 0, 2) PASSED. BIC: 20802.11
+ARIMA(3, 0, 3) PASSED. BIC: 20809.38
+ARIMA(3, 0, 4) PASSED. BIC: 20812.86
+ARIMA(3, 0, 5) PASSED. BIC: 20821.12
+ARIMA(4, 0, 0) PASSED. BIC: 20797.88
+ARIMA(4, 0, 1) PASSED. BIC: 20801.67
+ARIMA(4, 0, 2) PASSED. BIC: 20807.91
+ARIMA(4, 0, 3) PASSED. BIC: 20792.61
+ARIMA(4, 0, 4) PASSED. BIC: 20815.04
+ARIMA(4, 0, 5) PASSED. BIC: 20823.29
+ARIMA(5, 0, 0) PASSED. BIC: 20799.95
+ARIMA(5, 0, 1) PASSED. BIC: 20806.89
+ARIMA(5, 0, 2) PASSED. BIC: 20814.78
+ARIMA(5, 0, 3) PASSED. BIC: 20804.68
+ARIMA(5, 0, 4) PASSED. BIC: 20819.12
+ARIMA(5, 0, 5) PASSED. BIC: 20822.91
+--- Search Complete ---
+
+ Best Model Found: ARMA(2, 0, 1) with BIC: 20789.43
+
+==================================================
+ PROCESSING COUNTRY: FI
+==================================================
+ADF p-value (level): 0.0004
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(4, 0, 3) PASSED. BIC: 9970.90
+ARIMA(4, 0, 4) PASSED. BIC: 9984.77
+ARIMA(5, 0, 2) PASSED. BIC: 9982.68
+ARIMA(5, 0, 3) PASSED. BIC: 9987.67
+ARIMA(5, 0, 4) PASSED. BIC: 9991.67
+ARIMA(5, 0, 5) PASSED. BIC: 9990.70
+--- Search Complete ---
+
+ Best Model Found: ARMA(4, 0, 3) with BIC: 9970.90
+
+==================================================
+ PROCESSING COUNTRY: FR
+==================================================
+ADF p-value (level): 0.0000
+Series stationary; d=0
+--- Starting Model Search ---
+--- Search Complete ---
+
+ No model passed Ljung-Box for FR; selecting by lowest BIC.
+--- Starting Model Search (Finding Lowest BIC) ---
+  > New best found: ARMA(0, 0, 1) with BIC: 23687.74
+  > New best found: ARMA(0, 0, 2) with BIC: 22360.83
+  > New best found: ARMA(0, 0, 4) with BIC: 20843.91
+  > New best found: ARMA(0, 0, 5) with BIC: 20595.78
+  > New best found: ARMA(1, 0, 0) with BIC: 19356.15
+  > New best found: ARMA(1, 0, 1) with BIC: 18347.56
+  > New best found: ARMA(1, 0, 2) with BIC: 18202.04
+  > New best found: ARMA(1, 0, 4) with BIC: 18191.02
+  > New best found: ARMA(1, 0, 5) with BIC: 18164.22
+  > New best found: ARMA(3, 0, 4) with BIC: 18137.84
+--- Search Complete ---
+
+Best Model by BIC: ARMA(3, 0, 4) with BIC: 18137.84
+
+--- Diagnostic: Ljung-Box Test on Best Model's Residuals ---
+Null Hypothesis: The residuals are independently distributed (white noise).
+P-values < 0.05 support this, indicating a good fit.
+      lb_stat  lb_pvalue
+5    1.335711   0.931215
+10  26.810325   0.002790
+15  43.680983   0.000123
+
+==================================================
+ PROCESSING COUNTRY: HR
+==================================================
+ADF p-value (level): 0.0000
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(2, 0, 3) PASSED. BIC: 9806.74
+ARIMA(2, 0, 4) PASSED. BIC: 9812.04
+ARIMA(2, 0, 5) PASSED. BIC: 9817.00
+ARIMA(3, 0, 1) PASSED. BIC: 9796.95
+ARIMA(3, 0, 3) PASSED. BIC: 9808.20
+ARIMA(3, 0, 4) PASSED. BIC: 9814.87
+ARIMA(3, 0, 5) PASSED. BIC: 9821.75
+ARIMA(4, 0, 3) PASSED. BIC: 9815.35
+ARIMA(4, 0, 4) PASSED. BIC: 9814.74
+ARIMA(4, 0, 5) PASSED. BIC: 9830.91
+ARIMA(5, 0, 0) PASSED. BIC: 9802.50
+ARIMA(5, 0, 1) PASSED. BIC: 9808.30
+ARIMA(5, 0, 2) PASSED. BIC: 9814.84
+ARIMA(5, 0, 3) PASSED. BIC: 9818.08
+ARIMA(5, 0, 4) PASSED. BIC: 9811.81
+ARIMA(5, 0, 5) PASSED. BIC: 9818.93
+--- Search Complete ---
+
+ Best Model Found: ARMA(3, 0, 1) with BIC: 9796.95
+
+==================================================
+ PROCESSING COUNTRY: HU
+==================================================
+ADF p-value (level): 0.0000
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(3, 0, 3) PASSED. BIC: 9808.60
+ARIMA(3, 0, 4) PASSED. BIC: 9815.86
+ARIMA(4, 0, 2) PASSED. BIC: 9812.19
+ARIMA(4, 0, 3) PASSED. BIC: 9816.20
+ARIMA(4, 0, 4) PASSED. BIC: 9822.20
+ARIMA(4, 0, 5) PASSED. BIC: 9831.80
+ARIMA(5, 0, 2) PASSED. BIC: 9815.58
+ARIMA(5, 0, 4) PASSED. BIC: 9810.96
+--- Search Complete ---
+
+ Best Model Found: ARMA(3, 0, 3) with BIC: 9808.60
+
+==================================================
+ PROCESSING COUNTRY: IE
+==================================================
+ADF p-value (level): 0.0002
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(1, 0, 5) PASSED. BIC: 13671.96
+ARIMA(2, 0, 5) PASSED. BIC: 13674.15
+ARIMA(3, 0, 5) PASSED. BIC: 13679.83
+ARIMA(4, 0, 3) PASSED. BIC: 13673.84
+ARIMA(4, 0, 4) PASSED. BIC: 13675.48
+ARIMA(4, 0, 5) PASSED. BIC: 13675.26
+ARIMA(5, 0, 3) PASSED. BIC: 13668.34
+ARIMA(5, 0, 5) PASSED. BIC: 13682.97
+--- Search Complete ---
+
+ Best Model Found: ARMA(5, 0, 3) with BIC: 13668.34
+
+==================================================
+ PROCESSING COUNTRY: IT
+==================================================
+ADF p-value (level): 0.0000
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(3, 0, 3) PASSED. BIC: 17204.54
+ARIMA(3, 0, 4) PASSED. BIC: 17208.27
+ARIMA(4, 0, 3) PASSED. BIC: 17169.77
+ARIMA(4, 0, 4) PASSED. BIC: 17214.75
+ARIMA(4, 0, 5) PASSED. BIC: 17220.14
+ARIMA(5, 0, 3) PASSED. BIC: 17169.50
+ARIMA(5, 0, 4) PASSED. BIC: 17222.69
+ARIMA(5, 0, 5) PASSED. BIC: 17228.60
+--- Search Complete ---
+
+ Best Model Found: ARMA(5, 0, 3) with BIC: 17169.50
+
+==================================================
+ PROCESSING COUNTRY: LT
+==================================================
+ADF p-value (level): 0.0000
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(1, 0, 5) PASSED. BIC: 7925.89
+ARIMA(2, 0, 2) PASSED. BIC: 7920.01
+ARIMA(2, 0, 3) PASSED. BIC: 7924.40
+ARIMA(2, 0, 4) PASSED. BIC: 7926.39
+ARIMA(2, 0, 5) PASSED. BIC: 7930.55
+ARIMA(3, 0, 1) PASSED. BIC: 7920.70
+ARIMA(3, 0, 2) PASSED. BIC: 7926.81
+ARIMA(3, 0, 3) PASSED. BIC: 7926.27
+ARIMA(3, 0, 4) PASSED. BIC: 7927.98
+ARIMA(3, 0, 5) PASSED. BIC: 7935.00
+ARIMA(4, 0, 0) PASSED. BIC: 7915.25
+ARIMA(4, 0, 1) PASSED. BIC: 7921.41
+ARIMA(4, 0, 2) PASSED. BIC: 7928.53
+ARIMA(4, 0, 3) PASSED. BIC: 7934.22
+ARIMA(4, 0, 4) PASSED. BIC: 7934.68
+ARIMA(4, 0, 5) PASSED. BIC: 7942.53
+ARIMA(5, 0, 0) PASSED. BIC: 7921.33
+ARIMA(5, 0, 1) PASSED. BIC: 7929.02
+ARIMA(5, 0, 2) PASSED. BIC: 7933.04
+ARIMA(5, 0, 3) PASSED. BIC: 7935.11
+ARIMA(5, 0, 4) PASSED. BIC: 7939.29
+ARIMA(5, 0, 5) PASSED. BIC: 7946.44
+--- Search Complete ---
+
+ Best Model Found: ARMA(4, 0, 0) with BIC: 7915.25
+
+==================================================
+ PROCESSING COUNTRY: LU
+==================================================
+ADF p-value (level): 0.0019
+Series stationary; d=0
+--- Starting Model Search ---
+--- Search Complete ---
+
+ No model passed Ljung-Box for LU; selecting by lowest BIC.
+--- Starting Model Search (Finding Lowest BIC) ---
+  > New best found: ARMA(0, 0, 1) with BIC: 8014.32
+  > New best found: ARMA(0, 0, 2) with BIC: 6482.25
+  > New best found: ARMA(0, 0, 3) with BIC: 5434.74
+  > New best found: ARMA(0, 0, 4) with BIC: 4817.75
+  > New best found: ARMA(0, 0, 5) with BIC: 4452.83
+  > New best found: ARMA(1, 0, 1) with BIC: 3757.70
+  > New best found: ARMA(1, 0, 2) with BIC: 3562.17
+  > New best found: ARMA(1, 0, 3) with BIC: 3559.92
+  > New best found: ARMA(1, 0, 4) with BIC: 3558.43
+  > New best found: ARMA(1, 0, 5) with BIC: 3556.83
+  > New best found: ARMA(2, 0, 1) with BIC: 3550.31
+  > New best found: ARMA(3, 0, 4) with BIC: 3543.97
+--- Search Complete ---
+
+Best Model by BIC: ARMA(3, 0, 4) with BIC: 3543.97
+
+--- Diagnostic: Ljung-Box Test on Best Model's Residuals ---
+Null Hypothesis: The residuals are independently distributed (white noise).
+P-values < 0.05 support this, indicating a good fit.
+      lb_stat  lb_pvalue
+5    2.445133   0.784734
+10  35.389305   0.000107
+15  50.358712   0.000011
+
+==================================================
+ PROCESSING COUNTRY: LV
+==================================================
+ADF p-value (level): 0.0000
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(1, 0, 5) PASSED. BIC: 2985.00
+ARIMA(2, 0, 1) PASSED. BIC: 2950.15
+ARIMA(2, 0, 2) PASSED. BIC: 2957.34
+ARIMA(2, 0, 3) PASSED. BIC: 2964.55
+ARIMA(2, 0, 4) PASSED. BIC: 2971.79
+ARIMA(2, 0, 5) PASSED. BIC: 2978.61
+ARIMA(3, 0, 0) PASSED. BIC: 2953.42
+ARIMA(3, 0, 1) PASSED. BIC: 2957.33
+ARIMA(3, 0, 2) PASSED. BIC: 2964.47
+ARIMA(3, 0, 3) PASSED. BIC: 2971.87
+ARIMA(3, 0, 4) PASSED. BIC: 2977.18
+ARIMA(3, 0, 5) PASSED. BIC: 2985.74
+ARIMA(4, 0, 0) PASSED. BIC: 2957.82
+ARIMA(4, 0, 1) PASSED. BIC: 2964.54
+ARIMA(4, 0, 2) PASSED. BIC: 2971.74
+ARIMA(4, 0, 3) PASSED. BIC: 2975.55
+ARIMA(4, 0, 4) PASSED. BIC: 2983.37
+ARIMA(4, 0, 5) PASSED. BIC: 2991.24
+ARIMA(5, 0, 0) PASSED. BIC: 2964.47
+ARIMA(5, 0, 1) PASSED. BIC: 2971.76
+ARIMA(5, 0, 2) PASSED. BIC: 2979.01
+ARIMA(5, 0, 3) PASSED. BIC: 2983.55
+ARIMA(5, 0, 4) PASSED. BIC: 2989.61
+ARIMA(5, 0, 5) PASSED. BIC: 2996.78
+--- Search Complete ---
+
+ Best Model Found: ARMA(2, 0, 1) with BIC: 2950.15
+
+==================================================
+ PROCESSING COUNTRY: NL
+==================================================
+ADF p-value (level): 0.0003
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(2, 0, 5) PASSED. BIC: 14704.71
+ARIMA(3, 0, 4) PASSED. BIC: 14709.32
+ARIMA(3, 0, 5) PASSED. BIC: 14706.59
+ARIMA(4, 0, 4) PASSED. BIC: 14706.53
+ARIMA(4, 0, 5) PASSED. BIC: 14708.12
+ARIMA(5, 0, 2) PASSED. BIC: 14688.11
+ARIMA(5, 0, 3) PASSED. BIC: 14674.94
+ARIMA(5, 0, 4) PASSED. BIC: 14682.51
+ARIMA(5, 0, 5) PASSED. BIC: 14687.06
+--- Search Complete ---
+
+ Best Model Found: ARMA(5, 0, 3) with BIC: 14674.94
+
+==================================================
+ PROCESSING COUNTRY: NO
+==================================================
+ADF p-value (level): 0.0000
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(1, 0, 5) PASSED. BIC: 9956.48
+ARIMA(2, 0, 2) PASSED. BIC: 9935.62
+ARIMA(2, 0, 3) PASSED. BIC: 9942.88
+ARIMA(2, 0, 4) PASSED. BIC: 9944.46
+ARIMA(2, 0, 5) PASSED. BIC: 9951.18
+ARIMA(3, 0, 2) PASSED. BIC: 9942.89
+ARIMA(3, 0, 3) PASSED. BIC: 9947.13
+ARIMA(3, 0, 4) PASSED. BIC: 9950.83
+ARIMA(3, 0, 5) PASSED. BIC: 9957.60
+ARIMA(4, 0, 0) PASSED. BIC: 9938.06
+ARIMA(4, 0, 1) PASSED. BIC: 9945.16
+ARIMA(4, 0, 2) PASSED. BIC: 9949.54
+ARIMA(4, 0, 3) PASSED. BIC: 9948.93
+ARIMA(4, 0, 4) PASSED. BIC: 9957.63
+ARIMA(4, 0, 5) PASSED. BIC: 9964.91
+ARIMA(5, 0, 0) PASSED. BIC: 9944.80
+ARIMA(5, 0, 1) PASSED. BIC: 9947.41
+ARIMA(5, 0, 3) PASSED. BIC: 9957.47
+ARIMA(5, 0, 4) PASSED. BIC: 9964.88
+ARIMA(5, 0, 5) PASSED. BIC: 9972.16
+--- Search Complete ---
+
+ Best Model Found: ARMA(2, 0, 2) with BIC: 9935.62
+
+==================================================
+ PROCESSING COUNTRY: PL
+==================================================
+ADF p-value (level): 0.0000
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(3, 0, 5) PASSED. BIC: 16301.28
+ARIMA(4, 0, 4) PASSED. BIC: 16299.04
+ARIMA(4, 0, 5) PASSED. BIC: 16306.26
+--- Search Complete ---
+
+ Best Model Found: ARMA(4, 0, 4) with BIC: 16299.04
+
+==================================================
+ PROCESSING COUNTRY: PT
+==================================================
+ADF p-value (level): 0.0000
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(1, 0, 5) PASSED. BIC: 16806.64
+ARIMA(2, 0, 1) PASSED. BIC: 16797.51
+ARIMA(2, 0, 2) PASSED. BIC: 16804.59
+ARIMA(2, 0, 3) PASSED. BIC: 16811.54
+ARIMA(2, 0, 4) PASSED. BIC: 16808.45
+ARIMA(2, 0, 5) PASSED. BIC: 16808.43
+ARIMA(3, 0, 1) PASSED. BIC: 16804.55
+ARIMA(3, 0, 2) PASSED. BIC: 16811.70
+ARIMA(3, 0, 3) PASSED. BIC: 16812.88
+ARIMA(3, 0, 4) PASSED. BIC: 16808.78
+ARIMA(3, 0, 5) PASSED. BIC: 16813.84
+ARIMA(4, 0, 1) PASSED. BIC: 16811.45
+ARIMA(4, 0, 2) PASSED. BIC: 16818.98
+ARIMA(4, 0, 3) PASSED. BIC: 16820.03
+ARIMA(4, 0, 4) PASSED. BIC: 16814.57
+ARIMA(4, 0, 5) PASSED. BIC: 16820.97
+ARIMA(5, 0, 0) PASSED. BIC: 16803.01
+ARIMA(5, 0, 1) PASSED. BIC: 16808.56
+ARIMA(5, 0, 3) PASSED. BIC: 16818.01
+ARIMA(5, 0, 4) PASSED. BIC: 16821.09
+ARIMA(5, 0, 5) PASSED. BIC: 16827.34
+--- Search Complete ---
+
+ Best Model Found: ARMA(2, 0, 1) with BIC: 16797.51
+
+==================================================
+ PROCESSING COUNTRY: RO
+==================================================
+ADF p-value (level): 0.0000
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(1, 0, 5) PASSED. BIC: 14857.80
+ARIMA(2, 0, 1) PASSED. BIC: 14842.27
+ARIMA(2, 0, 2) PASSED. BIC: 14849.51
+ARIMA(2, 0, 3) PASSED. BIC: 14856.78
+ARIMA(2, 0, 4) PASSED. BIC: 14863.89
+ARIMA(2, 0, 5) PASSED. BIC: 14861.43
+ARIMA(3, 0, 1) PASSED. BIC: 14849.51
+ARIMA(3, 0, 2) PASSED. BIC: 14851.75
+ARIMA(3, 0, 3) PASSED. BIC: 14857.12
+ARIMA(3, 0, 4) PASSED. BIC: 14869.12
+ARIMA(3, 0, 5) PASSED. BIC: 14866.30
+ARIMA(4, 0, 0) PASSED. BIC: 14851.60
+ARIMA(4, 0, 1) PASSED. BIC: 14853.29
+ARIMA(4, 0, 2) PASSED. BIC: 14857.70
+ARIMA(4, 0, 3) PASSED. BIC: 14865.39
+ARIMA(4, 0, 4) PASSED. BIC: 14876.05
+ARIMA(4, 0, 5) PASSED. BIC: 14871.67
+ARIMA(5, 0, 0) PASSED. BIC: 14856.14
+ARIMA(5, 0, 1) PASSED. BIC: 14857.19
+ARIMA(5, 0, 2) PASSED. BIC: 14864.45
+ARIMA(5, 0, 3) PASSED. BIC: 14871.90
+ARIMA(5, 0, 4) PASSED. BIC: 14873.57
+ARIMA(5, 0, 5) PASSED. BIC: 14878.94
+--- Search Complete ---
+
+ Best Model Found: ARMA(2, 0, 1) with BIC: 14842.27
+
+==================================================
+ PROCESSING COUNTRY: SE
+==================================================
+ADF p-value (level): 0.0000
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(2, 0, 4) PASSED. BIC: 13671.02
+ARIMA(2, 0, 5) PASSED. BIC: 13678.09
+ARIMA(3, 0, 3) PASSED. BIC: 13674.22
+ARIMA(3, 0, 4) PASSED. BIC: 13674.77
+ARIMA(3, 0, 5) PASSED. BIC: 13681.94
+ARIMA(4, 0, 2) PASSED. BIC: 13667.50
+ARIMA(4, 0, 3) PASSED. BIC: 13677.04
+ARIMA(4, 0, 4) PASSED. BIC: 13674.61
+ARIMA(4, 0, 5) PASSED. BIC: 13659.40
+ARIMA(5, 0, 1) PASSED. BIC: 13671.74
+ARIMA(5, 0, 2) PASSED. BIC: 13678.45
+ARIMA(5, 0, 3) PASSED. BIC: 13684.72
+ARIMA(5, 0, 4) PASSED. BIC: 13681.78
+ARIMA(5, 0, 5) PASSED. BIC: 13687.24
+--- Search Complete ---
+
+ Best Model Found: ARMA(4, 0, 5) with BIC: 13659.40
+
+==================================================
+ PROCESSING COUNTRY: SI
+==================================================
+ADF p-value (level): 0.0000
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(3, 0, 4) PASSED. BIC: -2630.11
+ARIMA(3, 0, 5) PASSED. BIC: -2622.40
+ARIMA(4, 0, 5) PASSED. BIC: -2619.98
+ARIMA(5, 0, 3) PASSED. BIC: -2621.26
+ARIMA(5, 0, 5) PASSED. BIC: -2612.54
+--- Search Complete ---
+
+ Best Model Found: ARMA(3, 0, 4) with BIC: -2630.11
+
+==================================================
+ PROCESSING COUNTRY: SK
+==================================================
+ADF p-value (level): 0.0000
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(1, 0, 5) PASSED. BIC: -3013.70
+ARIMA(2, 0, 5) PASSED. BIC: -3003.90
+ARIMA(3, 0, 5) PASSED. BIC: -2998.06
+ARIMA(4, 0, 4) PASSED. BIC: -2997.88
+ARIMA(4, 0, 5) PASSED. BIC: -2990.43
+ARIMA(5, 0, 3) PASSED. BIC: -2996.85
+ARIMA(5, 0, 5) PASSED. BIC: -2983.79
+--- Search Complete ---
+
+ Best Model Found: ARMA(1, 0, 5) with BIC: -3013.70
+
+==================================================
+ PROCESSING COUNTRY: UK
+==================================================
+ADF p-value (level): 0.0003
+Series stationary; d=0
+--- Starting Model Search ---
+ARIMA(5, 0, 4) PASSED. BIC: 17120.02
+--- Search Complete ---
+
+ Best Model Found: ARMA(5, 0, 4) with BIC: 17120.02
+
+
+==============================================
+       FINAL MODEL SELECTION SUMMARY
+==============================================
+  - AT: Best model is ARIMA(4,0,3) | BIC: 16165.08
+  - BE: Best model is ARIMA(5,0,4) | BIC: 13856.39
+  - BG: Best model is ARIMA(3,0,0) | BIC: 10337.56
+  - CH: Best model is ARIMA(3,0,1) | BIC: 5686.65
+  - CZ: Best model is ARIMA(5,0,4) | BIC: 8940.12
+  - DE: Best model is ARIMA(4,0,4) | BIC: 21229.81
+  - DK: Best model is ARIMA(2,0,5) | BIC: 13909.17
+  - EE: Best model is ARIMA(3,0,1) | BIC: 7005.57
+  - EL: Best model is ARIMA(4,0,3) | BIC: 12400.32
+  - ES: Best model is ARIMA(2,0,1) | BIC: 20789.43
+  - FI: Best model is ARIMA(4,0,3) | BIC: 9970.90
+  - FR: Best model is ARIMA(3,0,4) | BIC: 18137.84
+  - HR: Best model is ARIMA(3,0,1) | BIC: 9796.95
+  - HU: Best model is ARIMA(3,0,3) | BIC: 9808.60
+  - IE: Best model is ARIMA(5,0,3) | BIC: 13668.34
+  - IT: Best model is ARIMA(5,0,3) | BIC: 17169.50
+  - LT: Best model is ARIMA(4,0,0) | BIC: 7915.25
+  - LU: Best model is ARIMA(3,0,4) | BIC: 3543.97
+  - LV: Best model is ARIMA(2,0,1) | BIC: 2950.15
+  - NL: Best model is ARIMA(5,0,3) | BIC: 14674.94
+  - NO: Best model is ARIMA(2,0,2) | BIC: 9935.62
+  - PL: Best model is ARIMA(4,0,4) | BIC: 16299.04
+  - PT: Best model is ARIMA(2,0,1) | BIC: 16797.51
+  - RO: Best model is ARIMA(2,0,1) | BIC: 14842.27
+  - SE: Best model is ARIMA(4,0,5) | BIC: 13659.40
+  - SI: Best model is ARIMA(3,0,4) | BIC: -2630.11
+  - SK: Best model is ARIMA(1,0,5) | BIC: -3013.70
+  - UK: Best model is ARIMA(5,0,4) | BIC: 17120.02
+
+----------------------------------------------
+ Results successfully saved to 'results/arma_best_model_wind_day_301.csv'
+----------------------------------------------

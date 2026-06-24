@@ -2,6 +2,7 @@
 # -------------------------------
 import pandas as pd
 import numpy as np
+import argparse
 import warnings
 import os
 from statsmodels.tsa.arima.model import ARIMA
@@ -9,14 +10,22 @@ from statsmodels.tsa.arima.model import ARIMA
 # Ignore convergence warnings for cleaner output
 warnings.filterwarnings("ignore", category=UserWarning)
 
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    "--forecast_day", type=int, default=271,
+    help="1-indexed day of year to forecast (must be > 60). "
+         "E.g. 271=Sep 28, 301=Oct 28, 332=Nov 28, 362=Dec 28."
+)
+args = parser.parse_args()
+
 
 # 2. LOAD DATA AND MODEL PARAMETERS
 # -------------------------------
 print("--- Loading Data and Model Parameters ---")
 
 # File paths
-model_params_file = '../results/arma_best_model_wind.csv'
-wind_data_file = '../data/df_wind.csv'
+model_params_file = f'results/arma_best_model_wind_day_{args.forecast_day}.csv'
+wind_data_file = 'data/df_wind.csv'
 
 # Load the model parameters saved from the previous step
 results_df = pd.read_csv(model_params_file)
@@ -53,13 +62,13 @@ for country in valid_countries:
 # SCENARIO GENERATION FOR MULTIPLE SETS
 # ------------------------------------------
 # Define the number of scenario sets to generate
-num_sets = 11
+num_sets = 10
 
-# Each subsequent set will forecast for the next day
-initial_train_date = 270 * 24
+# Training window ends at the hour immediately before forecast_day
+initial_train_date = (args.forecast_day - 1) * 24
 
 # Create the main output directory once
-output_dir = 'scenario_results'
+output_dir = os.path.join('scenario_results', f'day_{args.forecast_day}')
 os.makedirs(output_dir, exist_ok=True)
 
 
@@ -74,8 +83,8 @@ for set_num in range(num_sets):
     # Dictionary to hold scenarios for the current set
     all_forecast_scenarios = {}
 
-    # Slide the training window forward by 1 day (24 hours) for each set
-    train_date = initial_train_date + (set_num * 24)
+    # All sets use the same training window; variation comes from simulate() random draws
+    train_date = initial_train_date
 
     # --- Inner loop to generate scenarios for each country ---
     for index, row in results_df.iterrows():
@@ -92,7 +101,7 @@ for set_num in range(num_sets):
         forecast_train_data = df[country].iloc[train_date - 60*24:train_date].astype(float)
         model_fit = ARIMA(forecast_train_data, order=(p, 0, q)).fit()
         simulated_values = model_fit.simulate(nsimulations=forecast_steps, repetitions=n_scenarios)
-        scenarios = simulated_values.values
+        scenarios = simulated_values.values.copy()
 
         # Wind generation cannot be negative, so clip values at 0
         scenarios[scenarios < 0] = 0

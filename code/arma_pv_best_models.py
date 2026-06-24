@@ -2,9 +2,14 @@ import pandas as pd
 import numpy as np
 import warnings
 import logging
-import os # <-- NEW: For creating directories
-import matplotlib.pyplot as plt # <-- NEW: For plotting
-from statsmodels.graphics.tsaplots import plot_acf, plot_pacf # <-- NEW
+import os
+import argparse
+try:
+    import matplotlib.pyplot as plt
+    from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+    _PLOT_AVAILABLE = True
+except ImportError:
+    _PLOT_AVAILABLE = False
 from statsmodels.tsa.arima.model import ARIMA
 from statsmodels.stats.diagnostic import acorr_ljungbox
 from statsmodels.tsa.stattools import adfuller
@@ -55,8 +60,9 @@ def find_best_arima_model_bic_ljungbox(train_data, p_range, q_range, d_order, lj
     Finds the best ARIMA(p,d,q) model based on the lowest BIC,
     considering only models where residuals pass the Ljung-Box test.
 
-    The Ljung-Box null hypothesis is that the residuals are independently distributed.
-    A p-value < alpha suggests the residuals are random (white noise), which is desired.
+    The Ljung-Box null hypothesis is that the residuals are independently distributed
+    (white noise). A p-value >= alpha means we fail to reject this null hypothesis,
+    i.e. residuals appear to be white noise — this is the desired outcome.
 
     Args:
         train_data (pd.Series): The training time series data.
@@ -87,8 +93,8 @@ def find_best_arima_model_bic_ljungbox(train_data, p_range, q_range, d_order, lj
                     lb_results = acorr_ljungbox(model.resid, lags=ljung_box_lags, return_df=True)
                     p_values = lb_results['lb_pvalue']
                     
-                    # Check if all p-values are below the significance level (pass the test)
-                    if (p_values < alpha).all():
+                    # Pass if all p-values >= alpha (fail to reject white noise — good fit)
+                    if (p_values >= alpha).all():
                         current_bic = model.bic
                         # Check if this model is better than the previous best
                         if current_bic < best_bic:
@@ -101,6 +107,19 @@ def find_best_arima_model_bic_ljungbox(train_data, p_range, q_range, d_order, lj
     return best_model_info
 
 # -------------------------------
+# Parse arguments
+# -------------------------------
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    "--forecast_day", type=int, default=271,
+    help="1-indexed day of year to forecast (must be > 270 so a full 270-day training window fits). "
+         "E.g. 271=Sep 28, 301=Oct 28, 332=Nov 28, 362=Dec 28."
+)
+args = parser.parse_args()
+if args.forecast_day <= 270:
+    raise ValueError("forecast_day must be > 270 so a full 270-day PV training window fits within the data.")
+
+# -------------------------------
 # Setup logging
 # -------------------------------
 logging.basicConfig(
@@ -108,14 +127,14 @@ logging.basicConfig(
     format="%(asctime)s %(levelname)s: %(message)s",
     handlers=[
         logging.StreamHandler(),
-        logging.FileHandler("arma_predictions.log", mode="w", encoding="utf-8")
+        logging.FileHandler(f"arma_predictions_pv_day_{args.forecast_day}.log", mode="w", encoding="utf-8")
     ]
 )
 
 # -------------------------------
 # 1. Load & preprocess
 # -------------------------------
-df = pd.read_csv('../data/df_pv.csv')
+df = pd.read_csv('data/df_pv.csv')
 df['Date'] = pd.to_datetime(df['Date'], format='%d/%m/%Y %H:%M')
 df.rename(columns={'Hour': 'hour'}, inplace=True)
 
@@ -156,7 +175,7 @@ p_to_check = range(0, 6) # AR order p
 q_to_check = range(0, 6) # MA order q
 
 train_size = 270
-forecast_date = 270
+forecast_date = args.forecast_day
 hours = range(24)
 
 # Initialize a dictionary to store all forecasts
@@ -198,8 +217,9 @@ for country in valid_countries:
             })
             continue
         
-        print(f"Generating diagnostic plots for {country}, hour {h}...")
-        plot_time_series_diagnostics(train_data, country, h, save_dir='diagnostic_plots')
+        if _PLOT_AVAILABLE:
+            print(f"Generating diagnostic plots for {country}, hour {h}...")
+            plot_time_series_diagnostics(train_data, country, h, save_dir='diagnostic_plots')
 
         # --- Stationarity Check to determine 'd' ---
         d = 0 # Default differencing order
@@ -262,7 +282,7 @@ print("\n\n--- FINALIZING AND SAVING PARAMETERS ---")
 params_df = pd.DataFrame(best_params_list)
 
 params_df = params_df[['country', 'hour', 'p', 'd', 'q', 'bic', 'notes']]
-params_df.to_csv("arma_best_model_pv.csv", index=False)
+params_df.to_csv(f"results/arma_best_model_pv_day_{args.forecast_day}.csv", index=False)
 
 print("\n--- Sample of the output file ---")
 print(params_df.head())
