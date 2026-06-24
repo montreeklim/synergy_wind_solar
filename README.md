@@ -53,3 +53,21 @@ The code uses some open-source Python packages. The ones that the reader may be 
 - [GeoPandas](https://geopandas.org/) and [Cartopy](https://scitools.org.uk/cartopy/) – for producing geospatial plots
 - [statsmodels](https://www.statsmodels.org/) – for ARMA model fitting
 - [scikit-learn](https://scikit-learn.org/) – for the random forest, decision tree, and regression explanatory analysis
+
+## Reproducing the Results
+The scenario sets are already provided in `scenario_results/day_{271,301,332,362}/`, so reproduction can start directly from the optimization step (`--index` selects a country, 0–27, in the fixed country order listed in `code/`):
+
+```bash
+# Naive (no-storage) model — single country
+python code/naive_optimization_models.py --index 0
+
+# Storage-Enhanced (battery) model — single country
+python code/parallel_battery.py --index 0
+
+# Merge per-country outputs, then compute 95% confidence intervals
+python code/merge_naive_results.py
+python code/combine_battery_results.py
+python code/naive_CI_calculation.py
+```
+
+On HPC, the battery model across all 28 countries is submitted as a SLURM array via `sbatch code/run_parallel_battery_model.slurm`.
