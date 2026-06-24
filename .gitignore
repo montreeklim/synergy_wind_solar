@@ -20,3 +20,6 @@ diagnostic_plots/
 
 # Battery-sizing sensitivity variant not included in the public release
 battery_results/384_installed_capacity/
+
+# Generated ARIMA scenario sets — large, regenerable from the scripts
+data/scenarios/
