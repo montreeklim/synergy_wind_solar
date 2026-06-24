@@ -6,7 +6,7 @@ This repository accompanies the working paper titled "Measuring the Economic Val
 
 The repository contains the following content:
 
-- `data`: contains the two historical data files of wind and solar generation in 2015 for European countries, adapted from the EMHIRES dataset. All required features are selected and saved as `df_wind` and `df_pv`. Generated scenarios are contained in the `scenarios` folder, which includes 10 independent sets of 100 sampled scenarios for wind and solar generation of each country. `scenario_results/day_{271,301,332,362}` holds the equivalent scenario sets for each of the four rolling-window forecast dates used in the seasonal robustness analysis.
+- `data`: contains the two historical data files of wind and solar generation in 2015 for European countries, adapted from the EMHIRES dataset. All required features are selected and saved as `df_wind` and `df_pv`. `scenario_results/day_{271,301,332,362}` holds the generated ARIMA scenario sets (10 independent sets of 100 samples per country) for each of the four rolling-window forecast dates used in the seasonal robustness analysis.
 - `code`: contains scripts for the Naive optimization model and the Storage-Enhanced optimization model, scenario generation, statistical post-processing, and visualization.
   - Visualization: `mean_generation_chart.py`, `heat_map_correlation.py`, `heatmap_mean_log_scale.py` (exploratory data analysis plots); `boxplot_by_region.py`, `boxplot_by_region_naive.py`, `boxplot_battery_regional_all_tols.py`, `boxplot_naive_regional_all_tols.py`, `synergy_heatmap_day362.py` (Synergy Ratio plots)
   - Forecasting: `arma_pv_best_models.py`, `arma_wind_best_models.py` (select ARMA(p,q) lags minimizing BIC with white-noise residuals)
